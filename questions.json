@@ -13,13 +13,28 @@
   },
   {
     "id": "12fea322659ad19b",
-    "question": "(i) The real numbers $x, y$ and $z$ satisfy the equations\n$$\\begin{array}{l}\ny=\\frac{2 x}{1-x^{2}} \\\\\nz=\\frac{2 y}{1-y^{2}} \\\\\nx=\\frac{2 z}{1-z^{2}}\n\\end{array}$$\nLet $x=\\tan \\alpha$. Deduce that $y=\\tan 2 \\alpha$ and show that $\\tan \\alpha=\\tan 8 \\alpha$.\nFind all solutions of the equations, giving each value of $x, y$ and $z$ in the form $\\tan \\theta$ where $-\\frac{1}{2} \\pi<\\theta<\\frac{1}{2} \\pi$.\n(ii) Determine the number of real solutions of the simultaneous equations\ny=\\frac{3 x-x^{3}}{1-3 x^{2}} \\\\\nz=\\frac{3 y-y^{3}}{1-3 y^{2}} \\\\\nx=\\frac{3 z-z^{3}}{1-3 z^{2}}\n(iii) Consider the simultaneous equations\ny=2 x^{2}-1 \\\\\nz=2 y^{2}-1 \\\\\nx=2 z^{2}-1\n(a) Determine the number of real solutions of these simultaneous equations with $|x| \\leqslant 1,|y| \\leqslant 1,|z| \\leqslant 1$.\n(b) By finding the degree of a single polynomial equation which is satisfied by $x$, show that all solutions of these simultaneous equations have $|x| \\leqslant 1,|y| \\leqslant 1$, $|z| \\leqslant 1$.\n5",
-    "solution": "",
-    "marks": 20,
+    "question": "An acoustic mapping system is used to generate a contour map of a room. The system uses two sound sources, $F_1$ and $F_2$, placed at coordinates $(-c, 0)$ and $(c, 0)$ respectively, where $c > 0$.\n\nA specific contour curve, $C$, is defined as the locus of all points $P(x, y)$ in the plane such that the product of the distances from $P$ to $F_1$ and $F_2$ is a constant, $a^2$, where $a > 0$.\n\nThe signal strength at any point $P(x, y)$ is modelled by the function\n$S(x, y) = \\ln(PF_1) + \\ln(PF_2)$,\nwhere $PF_1$ is the distance from $P$ to $F_1$ and $PF_2$ is the distance from $P$ to $F_2$.\n\n(a) Show that the Cartesian equation of the curve $C$ can be expressed as\n$(x^2 + y^2 + c^2)^2 - 4c^2x^2 = a^4$.\n[3]\n\n(b) For any point on a specific contour curve $C$, the signal strength $S$ is constant.\nDetermine the equation of the contour curve on which the signal strength is $S = \\ln(18)$. Let $c = 3$ for this part.\n[3]\n\n(c) Consider the contour curve found in part (b), with $c = 3$ and $S = \\ln(18)$. By treating its equation as a quadratic in $x^2$, justify that this curve is bounded in the $y$-direction and deduce the maximum vertical distance of the curve from the $x$-axis.\n[4]",
+    "solution": "(a) The distances are $PF_1 = \\sqrt{(x + c)^2 + y^2}$ and $PF_2 = \\sqrt{(x - c)^2 + y^2}$.\nThe defining property of the curve $C$ is $(PF_1)(PF_2) = a^2$.\nSo, $\\sqrt{(x + c)^2 + y^2} \\times \\sqrt{(x - c)^2 + y^2} = a^2$.\nSquaring both sides:\n$((x + c)^2 + y^2) ((x - c)^2 + y^2) = a^4$ **(M1)**\nExpanding the terms inside the brackets:\n$(x^2 + 2cx + c^2 + y^2) (x^2 - 2cx + c^2 + y^2) = a^4$\nLet $A = x^2 + y^2 + c^2$. The equation becomes $(A + 2cx)(A - 2cx) = a^4$.\nThis is a difference of squares: $A^2 - (2cx)^2 = a^4$. **(M1)**\nSubstituting $A$ back:\n$(x^2 + y^2 + c^2)^2 - 4c^2x^2 = a^4$ **(A1)**\n\n(b) The signal strength is $S(x, y) = \\ln(PF_1) + \\ln(PF_2) = \\ln((PF_1)(PF_2))$.\nFor any point on the curve $C$, we know $(PF_1)(PF_2) = a^2$.\nTherefore, the signal strength on the curve $C$ is $S = \\ln(a^2)$. **(M1)**\n\nWe are given that $S = \\ln(18)$ and $c = 3$.\nSo, $\\ln(a^2) = \\ln(18)$, which implies $a^2 = 18$. **(A1)**\nSubstituting $c = 3$ and $a^4 = 324$ into the equation from part (a):\n$(x^2 + y^2 + 3^2)^2 - 4(3^2)x^2 = 18^2$\n$(x^2 + y^2 + 9)^2 - 36x^2 = 324$ **(A1)**\n\n(c) Expanding the equation from part (b):\n$x^4 + 2x^2(y^2 + 9) + (y^2 + 9)^2 - 36x^2 = 324$\n$x^4 + (2y^2 + 18 - 36)x^2 + (y^4 + 18y^2 + 81 - 324) = 0$\n$x^4 + 2(y^2 - 9)x^2 + (y^4 + 18y^2 - 243) = 0$\n\nLet $Z = x^2$. The equation is a quadratic in $Z$:\n$Z^2 + 2(y^2 - 9)Z + (y^4 + 18y^2 - 243) = 0$ **(M1)**\n\nFor real solutions for $x$, the discriminant $\\Delta$ must be non-negative:\n$\\Delta = [2(y^2 - 9)]^2 - 4(1)(y^4 + 18y^2 - 243)$\n$\\Delta = 4(y^4 - 18y^2 + 81 - y^4 - 18y^2 + 243)$\n$\\Delta = 144(9 - y^2)$ **(M1)**\n\nFor real $x$ to exist, $\\Delta \\geq 0 \\implies 9 - y^2 \\geq 0 \\implies y^2 \\leq 9$. **(R1)**\nThis shows the curve is bounded in the $y$-direction as $y \\in [-3, 3]$.\nThe maximum vertical distance from the $x$-axis is $\\max(|y|) = \\sqrt{9} = 3$. **(A1)**",
+    "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_POLYNOMIAL",
-    "archetype": "find/solve",
-    "difficulty": 8,
+    "skill": "FUNC_LOG",
+    "secondary_skills": [
+      "FUNC_POLYNOMIAL"
+    ],
+    "archetype": "spatial_coordinate_bridge",
+    "mechanisms": [
+      "hidden_structure",
+      "constraint_reasoning",
+      "hence_chains"
+    ],
+    "command_terms": [
+      "show that",
+      "determine",
+      "justify",
+      "deduce"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
     "source": "STEP_2_2023",
     "paper_type": "Paper 1"
   },
