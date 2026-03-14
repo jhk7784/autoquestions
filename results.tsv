@@ -3,3 +3,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-14T04:12:41Z	0.669160	0.675018	+0.005858	keep	mutate [39] FUNC_RATIONAL→FUNC_MODULUS, prove→multi-step synthesis
 2026-03-14T05:27:55Z	0.675018	0.680971	+0.005953	keep	mutate [13] FUNC_RATIONAL→FUNC_EXP, prove→model/apply
 2026-03-14T06:09:16Z	0.680971	0.685739	+0.004768	keep	mutate [22] FUNC_RATIONAL→FUNC_MODULUS, prove→multi-step synthesis
+2026-03-14T07:07:17Z	0.685739	0.691435	+0.005696	keep	mutate [9] FUNC_POLYNOMIAL→FUNC_SUM_PRODUCT_ROOTS, prove→show that
