@@ -73,13 +73,27 @@
   },
   {
     "id": "3b00b9af16d21fd3",
-    "question": "The curves $C_{1}$ and $C_{2}$ both satisfy the differential equation\n$$\\frac{\\mathrm{d} y}{\\mathrm{~d} x}=\\frac{k x y-y}{x-k x y}$$\nwhere $k=\\ln 2$.\nAll points on $C_{1}$ have positive $x$ and $y$ co-ordinates and $C_{1}$ passes through $(1,1)$. All points on $C_{2}$ have negative $x$ and $y$ co-ordinates and $C_{2}$ passes through $(-1,-1)$.\n(i) Show that the equation of $C_{1}$ can be written as $(x-y)^{2}=(x+y)^{2}-2^{x+y}$.\nDetermine a similar result for curve $C_{2}$.\nHence show that $y=x$ is a line of symmetry of each curve.\n(ii) Sketch on the same axes the curves $y=x^{2}$ and $y=2^{x}$, for $x \\geqslant 0$. Hence show that $C_{1}$ lies between the lines $x+y=2$ and $x+y=4$.\nSketch curve $C_{1}$.\n(iii) Sketch curve $C_{2}$.\n©UCLES 2020\n3",
-    "solution": "",
-    "marks": 20,
+    "question": "Consider the function $f_k(x) = \\log_k(x^2 - 8x + 20)$, where $k \\in \\mathbb{Z}, k > 1$.\n\nThe set $S_k$ is defined as the set of all integer values of $x$ for which $f_k(x)$ is an integer.\nThat is, $S_k = \\{ x \\in \\mathbb{Z} \\mid f_k(x) \\in \\mathbb{Z} \\}$.\n\n(a) Show that the expression $x^2 - 8x + 20$ has a minimum value of 4.\n[2 marks]\n\n(b) It is given that the set $S_k$ contains exactly three distinct elements.\nDetermine the value of $k$.\n[5 marks]\n\n(c) For the value of $k$ found in part (b), find the elements of $S_k$ and show that they form an arithmetic progression.\n[2 marks]",
+    "solution": "**(a) Show that the expression $x^2 - 8x + 20$ has a minimum value of 4.**\n\n*   **Method 1: Completing the Square**\n    $x^2 - 8x + 20 = (x-4)^2 - 16 + 20 = (x-4)^2 + 4$\n    Since $(x-4)^2 \\ge 0$ for all $x \\in \\mathbb{R}$, the minimum value occurs when $(x-4)^2=0$. The minimum value is $0+4=4$.\n\n*   **Method 2: Using Calculus**\n    Let $g(x) = x^2 - 8x + 20$. Then $g'(x) = 2x - 8$. Setting $g'(x)=0$ gives $x=4$. Since $g''(x)=2 > 0$, this is a local minimum. $g(4) = 4^2 - 8(4) + 20 = 4$.\n\n**(M1)** For attempting to complete the square or use differentiation. **(A1)** For correctly showing the minimum value is 4.\n\n**(b) Determine the value of $k$ such that the set $S_k$ contains exactly three elements.**\n\nFor $f_k(x) = m \\in \\mathbb{Z}$, we have $\\log_k(x^2 - 8x + 20) = m \\implies x^2 - 8x + 20 = k^m$.\nUsing part (a), $(x-4)^2 + 4 = k^m$.\nLet $N = x-4$. For there to be exactly three integer solutions for $x$, there must be exactly three integer solutions for $N$. Since the equation is in $N^2$, if $N_0 \\ne 0$ is a solution, $-N_0$ is also a solution. For the total count to be odd (three), one solution must be $N=0$.\n**(M1)** For setting up $(x-4)^2 + 4 = k^m$. **(R1)** For reasoning that $N=0$ must be a solution.\nIf $N=0$, $4 = k^m$. Since $k > 1$ is an integer, possibilities are $(k=4, m=1)$ or $(k=2, m=2)$. **(A1)**\nCase 1: $k=4$. $N^2 + 4 = 4^m \\implies (2^m-N)(2^m+N)=4$. Only solution is $N=0$ (one element).\nCase 2: $k=2$. $N^2 + 4 = 2^m$. For $m=2, N=0$. For $m=3, N^2+4=8 \\implies N^2=4 \\implies N=\\pm 2$. For $m>3$, no more integer solutions. This gives exactly three solutions: $N \\in \\{-2, 0, 2\\}$.\n**(M1)** for testing cases. **(A1)** for $k=2$.\n\n**(c) Find elements and show arithmetic progression.**\n\nFor $k=2$, $x-4 \\in \\{-2, 0, 2\\} \\implies x \\in \\{2, 4, 6\\}$. **(A1)**\nCommon difference $d = 4-2 = 2$ and $6-4 = 2$. Thus, the elements form an arithmetic progression. **(R1)**",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_GRAPH_SKETCH",
-    "archetype": "prove",
-    "difficulty": 8,
+    "skill": "FUNC_LOG",
+    "secondary_skills": [
+      "FUNC_QUADRATIC"
+    ],
+    "archetype": "reverse_engineering",
+    "mechanisms": [
+      "cross_topic_synthesis",
+      "hidden_structure",
+      "hence_chains"
+    ],
+    "command_terms": [
+      "show that",
+      "determine",
+      "find"
+    ],
+    "style": "pure_abstract",
+    "difficulty": 7,
     "source": "STEP_2_2020",
     "paper_type": "Paper 1"
   },
