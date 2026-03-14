@@ -10,3 +10,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-14T09:04:28Z	0.560757	0.608042	+0.047285	keep	mutate [17] skill:FUNC_RATIONAL→FUNC_SUM_PRODUCT_ROOTS; arch:prove→representation_bridge; style:None→modelling; mechs:[cross_topic_synthesis,hence_chains]
 2026-03-14T09:48:14Z	0.608042	0.652403	+0.044361	keep	mutate [29] skill:FUNC_DOMAIN→FUNC_MODULUS; arch:prove→proof_by_contradiction_via_construction; style:None→modelling; mechs:[constraint_reasoning,proof_unfamiliar_context]
 2026-03-14T10:03:30Z	0.652403	0.690038	+0.037635	keep	mutate [1] skill:FUNC_POLYNOMIAL→FUNC_LOG; arch:find/solve→spatial_coordinate_bridge; style:None→applied_real_world; mechs:[hidden_structure,constraint_reasoning,hence_chains]
+2026-03-14T10:46:25Z	0.690038	0.705511	+0.015473	keep	mutate [19] skill:FUNC_RATIONAL→FUNC_EXP; arch:prove→proof_by_contradiction_via_construction; style:None→applied_real_world; mechs:[proof_unfamiliar_context,constraint_reasoning]
