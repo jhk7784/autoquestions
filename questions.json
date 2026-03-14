@@ -366,13 +366,28 @@
   },
   {
     "id": "5f95fe62589dd6b9",
-    "question": "Let $f(x) = \\ln x$ for $x > 0$.\n\n(a) The function $h$ is defined by $h(x) = f(|x-2|)$. \\\\\n(i) State the domain of $h$. \\\\\n(ii) Find the equations of the vertical asymptote(s) of the graph of $y=h(x)$. \\\\\n(iii) Find the $x$-intercepts of the graph of $y=h(x)$. [5 marks]\n\n(b) The graph of $g$ is obtained by applying the following sequence of transformations to the graph of $f$: \\\\\n- Vertical stretch by a factor of 2. \\\\\n- Reflection in the $y$-axis. \\\\\n- Translation by the vector $\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$. \\\\\nShow that $g(x) = \\ln(3-x)^2 + 1$ for $x < 3$. [4 marks]\n\n(c) Find the number of real solutions to the equation $h(x) = g(x)$ in the interval $x < 2$. Justify your answer. [6 marks]",
-    "solution": "(a) (i) The argument of the natural logarithm must be strictly positive, so $|x-2| > 0$. This is true for all $x \\in \\mathbb{R}$ except $x = 2$. Domain: $x \\in \\mathbb{R}, x \\neq 2$. [A1]\n(ii) As $x \\to 2$, $|x-2| \\to 0$ and $\\ln(|x-2|) \\to -\\infty$. Thus, the vertical asymptote is $x = 2$. [A1]\n(iii) $h(x) = 0 \\implies \\ln(|x-2|) = 0$ [M1]\n$|x-2| = 1 \\implies x - 2 = 1 \\text{ or } x - 2 = -1$ [A1]\n$x = 3, x = 1$. The $x$-intercepts are $(1, 0)$ and $(3, 0)$. [A1]\n\n(b) Applying vertical stretch by factor of 2: $y = 2\\ln(x)$ [M1]\nReflection in the $y$-axis: $y = 2\\ln(-x)$ [A1]\nTranslation by $\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$: Replace $x$ with $(x-3)$ and add $1$ to the function. [M1]\n$g(x) = 2\\ln(-(x-3)) + 1 = 2\\ln(3-x) + 1$ [A1]\nUsing log laws, $g(x) = \\ln((3-x)^2) + 1$. [AG]\n\n(c) For $x < 2$, $|x-2| = -(x-2) = 2-x$. Thus $h(x) = \\ln(2-x)$. [M1]\nEquating $h(x)$ and $g(x)$: $\\ln(2-x) = \\ln((3-x)^2) + 1$ [M1]\n$\\ln(2-x) - \\ln((3-x)^2) = 1 \\implies \\ln\\left(\\frac{2-x}{(3-x)^2}\\right) = 1$ [M1]\n$\\frac{2-x}{(3-x)^2} = e \\implies 2-x = e(9 - 6x + x^2)$ [A1]\n$ex^2 + (1-6e)x + (9e-2) = 0$\nThe number of real solutions is determined by the discriminant $\\Delta$: [M1]\n$\\Delta = (1-6e)^2 - 4(e)(9e-2) = 1 - 12e + 36e^2 - 36e^2 + 8e = 1 - 4e$\nSince $e \\approx 2.718$, we have $4e > 10$, so $\\Delta < 0$. [R1]\nTherefore, there are $0$ real solutions. [AG]",
-    "marks": 15,
+    "question": "**Context:** In digital signal processing, transformations are applied to a filter's characteristic polynomial, $P(x)$, to analyze stability. One such transformation, $T$, produces a new polynomial, $Q(x) = T[P(x)]$, such that the roots of $Q(x)$ are the squares of the roots of $P(x)$. An engineer is working with monic quadratic polynomials with real coefficients.\n\nThe target characteristic polynomial after transformation is given by $Q(x) = x^2 - 6x + 25$.\n\n(a) Verify, without finding its roots, that $P_1(x) = x^2 - 4x + 5$ is a valid input polynomial for the transformation $T$ to produce $Q(x)$.\n[3]\n\n(b) The engineer needs to find all possible input polynomials. By considering the roots of $Q(x)$, construct all other monic quadratic polynomials with real coefficients, $P(x)$, for which $T[P(x)] = Q(x)$.\n[5]\n\n(c) Justify why the set of polynomials found in parts (a) and (b) is complete.\n[1]",
+    "solution": "**Part (a)**\nLet the roots of $P_1(x) = x^2 - 4x + 5$ be $\\alpha$ and $\\beta$.\nUsing Vieta's formulas:\n$\\alpha + \\beta = 4$ and $\\alpha\\beta = 5$.\n**(M1)**\n\nThe roots of the transformed polynomial $Q_1(x) = T[P_1(x)]$ are $\\alpha^2$ and $\\beta^2$.\nThe sum of the new roots is $\\alpha^2 + \\beta^2 = (\\alpha+\\beta)^2 - 2\\alpha\\beta = (4)^2 - 2(5) = 16 - 10 = 6$.\nThe product of the new roots is $(\\alpha\\beta)^2 = 5^2 = 25$.\n**(M1)**\n\nThe new polynomial is $x^2 - (\\text{sum of roots})x + (\\text{product of roots})$, which is $x^2 - 6x + 25$.\nThis is identical to the target polynomial $Q(x)$.\n**(A1)**\n**[3 marks]**\n\n**Part (b)**\nFirst, find the roots of the target polynomial $Q(x) = x^2 - 6x + 25$.\nUsing the quadratic formula: $x = \\frac{6 \\pm \\sqrt{(-6)^2 - 4(1)(25)}}{2} = \\frac{6 \\pm \\sqrt{36 - 100}}{2} = \\frac{6 \\pm \\sqrt{-64}}{2} = 3 \\pm 4i$.\nLet the roots of $Q(x)$ be $\\gamma_1 = 3+4i$ and $\\gamma_2 = 3-4i$.\n**(A1)**\n\nLet the roots of an input polynomial $P(x)$ be $\\alpha_1$ and $\\alpha_2$.\nBy the definition of the transformation $T$, we must have $\\{\\alpha_1^2, \\alpha_2^2\\} = \\{\\gamma_1, \\gamma_2\\}$.\nThis requires finding the square roots of $3+4i$ and $3-4i$.\nLet $(a+bi)^2 = 3+4i$. Then $a^2-b^2=3$ and $2ab=4$.\nSolving simultaneously: $a=2/b \\Rightarrow (2/b)^2 - b^2 = 3 \\Rightarrow 4 - b^4 = 3b^2 \\Rightarrow b^4+3b^2-4=0$.\n$(b^2+4)(b^2-1)=0$. Since $b \\in \\mathbb{R}$, $b=\\pm 1$.\nIf $b=1, a=2$. If $b=-1, a=-2$.\nSo, the square roots of $3+4i$ are $2+i$ and $-2-i$.\n**(M1)(A1)**\n\nSince $P(x)$ must have real coefficients, its roots $\\alpha_1, \\alpha_2$ must be a complex conjugate pair.\nThe square roots of $\\gamma_2 = 3-4i$ are the conjugates of the square roots of $\\gamma_1$, i.e., $2-i$ and $-2+i$.\n**(R1)**\n\nWe need to form pairs of roots for $P(x)$ that are conjugate pairs from the set of all possible square roots: $\\{2+i, -2-i, 2-i, -2+i\\}$.\n*   Case 1: Roots are $\\{2+i, 2-i\\}$. This is a conjugate pair. Sum $= 4$, Product $= 5$. This gives $P_1(x) = x^2-4x+5$.\n*   Case 2: Roots are $\\{-2-i, -2+i\\}$. This is a conjugate pair. Sum $= -4$, Product $= 5$. This gives $P_2(x) = x^2 + 4x + 5$.\n**(M1)(A1)**\n**[5 marks]**\n\n**Part (c)**\nFor a quadratic polynomial $P(x)$ to have real coefficients, its roots must be a conjugate pair, $\\{\\alpha, \\bar{\\alpha}\\}$. The process in (b) considered all possible complex square roots and constructed polynomials from all valid conjugate pairings. Other pairings of roots are not conjugate pairs and would result in non-real coefficients. Therefore, the set of solutions is complete.\n**(R1)**\n**[1 mark]**",
+    "marks": 9,
     "topic": "Functions",
     "skill": "FUNC_TRANSFORM",
-    "archetype": "prove",
-    "difficulty": 8,
+    "secondary_skills": [
+      "FUNC_POLYNOMIAL",
+      "FUNC_SUM_PRODUCT_ROOTS"
+    ],
+    "archetype": "reverse_engineering",
+    "mechanisms": [
+      "cross_topic_synthesis",
+      "hidden_structure",
+      "constraint_reasoning"
+    ],
+    "command_terms": [
+      "show that",
+      "construct",
+      "find"
+    ],
+    "style": "modelling",
+    "difficulty": 7,
     "source": "synthetic:gemini_cli_revised:FUNC_TRANSFORM",
     "paper_type": "Paper 1"
   },
