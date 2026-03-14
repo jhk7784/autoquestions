@@ -1,13 +1,28 @@
 [
   {
     "id": "5a150542c29f6781",
-    "question": "A function $\\mathrm{f}(x)$ is said to be concave for $a<x<b$ if\n$$t \\mathrm{f}\\left(x_{1}\\right)+(1-t) \\mathrm{f}\\left(x_{2}\\right) \\leqslant \\mathrm{f}\\left(t x_{1}+(1-t) x_{2}\\right)$$\nfor $a<x_{1}<b, a<x_{2}<b$ and $0 \\leqslant t \\leqslant 1$.\nIllustrate this definition by means of a sketch, showing the chord joining the points $\\left(x_{1}, \\mathrm{f}\\left(x_{1}\\right)\\right)$ and ( $x_{2}, \\mathrm{f}\\left(x_{2}\\right)$ ), in the case $x_{1}<x_{2}$ and $\\mathrm{f}\\left(x_{1}\\right)<\\mathrm{f}\\left(x_{2}\\right)$.\nExplain why a function $\\mathrm{f}(x)$ satisfying $\\mathrm{f}^{\\prime \\prime}(x)<0$ for $a<x<b$ is concave for $a<x<b$.\n(i) By choosing $t, x_{1}$ and $x_{2}$ suitably, show that, if $\\mathrm{f}(x)$ is concave for $a<x<b$, then\n$$\\mathrm{f}\\left(\\frac{u+v+w}{3}\\right) \\geqslant \\frac{\\mathrm{f}(u)+\\mathrm{f}(v)+\\mathrm{f}(w)}{3},$$\nfor $a<u<b, a<v<b$ and $a<w<b$.\n(ii) Show that, if $A, B$ and $C$ are the angles of a triangle, then\n$$\\sin A+\\sin B+\\sin C \\leqslant \\frac{3 \\sqrt{3}}{2} .$$\n(iii) By considering $\\ln (\\sin x)$, show that, if $A, B$ and $C$ are the angles of a triangle, then\n$$\\sin A \\times \\sin B \\times \\sin C \\leqslant \\frac{3 \\sqrt{3}}{8} .$$\n© UCLES 2018\n[Turn over\nFor every positive integer $n$, there is a prime number between $2 n$ and $4 n$.\nFind all pairs of positive integers $(n, m)$ that satisfy\n$$1!\\times 3!\\times \\cdots \\times(2 n-1)!=m!$$",
-    "solution": "",
-    "marks": 20,
+    "question": "**Context:** The computational efficiency, $E$, of a new parallel processing algorithm depends on two tuning parameters, $x > 1$ and $y > 1$. The efficiency is modelled by the function:\n$$E(x, y) = \\frac{1}{\\log_{x}(K)} + \\frac{1}{\\log_{y}(K)}$$\nwhere $K > 1$ is a constant representing the complexity of the task.\n\n(a) Verify that $E(x,y) = \\log_K(xy)$.\n[2]\n\n(b) For a specific task, the parameters are constrained such that their geometric mean is fixed, $\\sqrt{xy} = G$. Determine the efficiency $E$ under this constraint, giving your answer in terms of $G$ and $K$.\n[2]\n\n(c) For a different task, the parameters are constrained by their arithmetic mean, $\\frac{x+y}{2} = A$. By considering the product $xy$ under this constraint, justify that the maximum possible efficiency occurs when $x=y=A$.\n[3]\n\n(d) Deduce the maximum possible efficiency for the task in part (c), giving your answer in terms of $A$ and $K$.\n[2]",
+    "solution": "**(a)** Applying the change of base rule $\\frac{1}{\\log_b(a)} = \\log_a(b)$ to both terms:\n$\\frac{1}{\\log_{x}(K)} = \\log_K(x)$ and $\\frac{1}{\\log_{y}(K)} = \\log_K(y)$ **(M1)**\n$E(x,y) = \\log_K(x) + \\log_K(y)$\nUsing the logarithm addition rule $\\log(a) + \\log(b) = \\log(ab)$:\n$E(x,y) = \\log_K(xy)$ **(A1)**\n\n**(b)** From the definition of the geometric mean, $\\sqrt{xy} = G \\Rightarrow xy = G^2$. **(M1)**\nSubstituting this into the result from part (a):\n$E = \\log_K(G^2) = 2\\log_K(G)$ **(A1)**\n\n**(c)** The arithmetic mean constraint gives $x+y = 2A$, so $y = 2A - x$. **(M1)**\nEfficiency $E$ is maximized when $\\log_K(xy)$ is maximized. Since $K>1$, the function $f(u) = \\log_K(u)$ is strictly increasing; therefore, maximizing $E$ is equivalent to maximizing the product $P = xy$. **(R1)**\nSubstituting $y$: $P(x) = x(2A-x) = 2Ax - x^2$.\nThis is a concave-down quadratic with its vertex (maximum) at $x = -\\frac{2A}{2(-1)} = A$.\nWhen $x=A$, $y = 2A - A = A$. Thus, maximum efficiency occurs when $x=y=A$. **(A1)**\n\n**(d)** Using the result from part (c), the maximum product is $xy = A \\cdot A = A^2$. **(M1)**\nSubstituting this into the efficiency formula:\n$E_{max} = \\log_K(A^2) = 2\\log_K(A)$ **(A1)**",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_RATIONAL",
-    "archetype": "prove",
-    "difficulty": 8,
+    "skill": "FUNC_LOG",
+    "secondary_skills": [
+      "FUNC_QUADRATIC"
+    ],
+    "archetype": "reverse_engineering",
+    "mechanisms": [
+      "hidden_structure",
+      "proof_unfamiliar_context",
+      "constraint_reasoning"
+    ],
+    "command_terms": [
+      "verify",
+      "determine",
+      "justify",
+      "deduce"
+    ],
+    "style": "modelling",
+    "difficulty": 7,
     "source": "STEP_2_2018",
     "paper_type": "Paper 1"
   },
