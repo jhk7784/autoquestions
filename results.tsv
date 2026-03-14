@@ -1,0 +1,2 @@
+timestamp	old_score	new_score	delta	status	description
+2026-03-14T03:38:04Z	0.626534	0.669160	+0.042626	keep	mutate [38] FUNC_RATIONAL→FUNC_EXP, prove→model/apply
