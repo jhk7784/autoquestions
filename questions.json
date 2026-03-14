@@ -52,13 +52,28 @@
   },
   {
     "id": "b55cc30884e6f3d3",
-    "question": "Let $\\mathbf{M}=\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)$ be a real matrix with $a \\neq d$. The transformation represented by $\\mathbf{M}$ has exactly two distinct invariant lines through the origin.\n(i) Show that, if neither invariant line is the $y$-axis, then the gradients of the invariant lines are the roots of the equation\n$$b m^{2}+(a-d) m-c=0 .$$\nIf one invariant line is the $y$-axis, what is the gradient of the other?\n(ii) Show that, if the angle between the two invariant lines is $45^{\\circ}$, then\n$$(a-d)^{2}=(b-c)^{2}-4 b c$$\n(iii) Find a necessary and sufficient condition, on some or all of $a, b, c$ and $d$, for the two invariant lines to make equal angles with the line $y=x$.\n(iv) Give an example of a matrix which satisfies both the conditions in parts (ii) and (iii).\n9",
-    "solution": "",
-    "marks": 20,
+    "question": "A signal processing system uses a sequence of identical filters to reduce noise. An initial signal is described by the function $S_0(t) = e^{-t}$ for $t \\ge 0$.\n\nEach filter transforms an incoming signal, $S_{in}(t)$, into an outgoing signal, $S_{out}(t)$, by applying a non-linear time-warp transformation $t \\mapsto \\ln(1+e^t)$. The resulting signal is thus defined by the recursive relation $S_{m+1}(t) = S_m(\\ln(1+e^t))$ for $m \\ge 0$, where $S_m(t)$ is the signal after passing through $m$ filters.\n\n**(a)** Find the function $S_2(t)$, the signal after it has passed through two consecutive filters.\n[4 marks]\n\n**(b)** Based on your results for $S_0(t)$, $S_1(t)$ and $S_2(t)$, deduce a conjecture for the general form of $S_m(t)$ for $m \\in \\mathbb{N}_0$.\n[1 mark]\n\n**(c)** Prove your conjecture from part (b) is true for all integers $m \\ge 0$ using mathematical induction.\n[5 marks]",
+    "solution": "**(a) Find the function $S_2(t)$, the signal after it has passed through two consecutive filters.**\n\n* **Step 1:** Find $S_1(t)$.\n$S_1(t) = S_0(\\ln(1+e^t)) = e^{-(\\ln(1+e^t))}$ **(M1)** for correct composition of functions.\nUsing the property $e^{-\\ln x} = x^{-1}$, we obtain $S_1(t) = (1+e^t)^{-1}$ **(A1)**.\n* **Step 2:** Find $S_2(t)$.\n$S_2(t) = S_1(\\ln(1+e^t)) = (1+e^{\\ln(1+e^t)})^{-1}$ **(M1)** for correct composition using the expression for $S_1(t)$.\nUsing the property $e^{\\ln x} = x$, we obtain $S_2(t) = (1+(1+e^t))^{-1} = (2+e^t)^{-1}$ **(A1)**.\n\n**(b) Deduce a conjecture for the general form of $S_m(t)$.**\n\n* We have $S_0(t) = e^{-t} = (0+e^t)^{-1}$, $S_1(t) = (1+e^t)^{-1}$, and $S_2(t) = (2+e^t)^{-1}$.\n* The pattern suggests $S_m(t) = (m+e^t)^{-1}$. **(A1)**\n\n**(c) Prove your conjecture using mathematical induction.**\n\n* Let $P(m)$ be the statement $S_m(t) = (m+e^t)^{-1}$ for $m \\in \\mathbb{N}_0$.\n* **Base Case:** For $m=0$, $S_0(t) = (0+e^t)^{-1} = e^{-t}$, which is true as per the initial condition. **(R1)**\n* **Inductive Hypothesis:** Assume $P(k)$ is true for some integer $k \\ge 0$, i.e., $S_k(t) = (k+e^t)^{-1}$. **(M1)**\n* **Inductive Step:** Show $P(k+1)$ is true.\n$S_{k+1}(t) = S_k(\\ln(1+e^t))$ by definition.\nSubstituting the hypothesis: $S_{k+1}(t) = (k+e^{\\ln(1+e^t)})^{-1}$ **(M1)**\n$S_{k+1}(t) = (k+(1+e^t))^{-1} = (k+1+e^t)^{-1}$ **(A1)**\n* **Conclusion:** Since $P(0)$ is true and $P(k) \\Rightarrow P(k+1)$, by the principle of mathematical induction, $P(m)$ is true for all $m \\ge 0$. **(R1)**",
+    "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_TRANSFORM",
-    "archetype": "prove",
-    "difficulty": 8,
+    "skill": "FUNC_EXP",
+    "secondary_skills": [
+      "FUNC_LOG",
+      "FUNC_COMPOSITE"
+    ],
+    "archetype": "generalization_from_special_case",
+    "mechanisms": [
+      "hidden_structure",
+      "hence_chains",
+      "proof_unfamiliar_context"
+    ],
+    "command_terms": [
+      "find",
+      "deduce",
+      "prove"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
     "source": "STEP_2_2022",
     "paper_type": "Paper 1"
   },
