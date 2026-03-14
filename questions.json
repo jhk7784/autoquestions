@@ -233,13 +233,30 @@
   },
   {
     "id": "607cfd83e037d907",
-    "question": "(i) Sketch the curve $y=x \\mathrm{e}^{x}$, giving the coordinates of any stationary points.\n(ii) The function f is defined by $\\mathrm{f}(x)=x \\mathrm{e}^{x}$ for $x \\geqslant a$, where $a$ is the minimum possible value such that f has an inverse function. What is the value of $a$ ?\nLet g be the inverse of f . Sketch the curve $y=\\mathrm{g}(x)$.\n(iii) For each of the following equations, find a real root in terms of a value of the function g , or demonstrate that the equation has no real root. If the equation has two real roots, determine whether the root you have found is greater than or less than the other root.\n(a) $\\mathrm{e}^{-x}=5 x$\n(b) $2 x \\ln x+1=0$\n(c) $3 x \\ln x+1=0$\n(d) $x=3 \\ln x$\n(iv) Given that the equation $x^{x}=10$ has a unique positive root, find this root in terms of a value of the function g .",
-    "solution": "",
-    "marks": 20,
+    "question": "A robotic arm on an advanced manufacturing line operates in a two-dimensional plane. The arm’s primary operational envelope, the region $R$, is defined by the set of points $(x,y)$ that satisfy the inequality:\n\n$$|x-4| + |y| \\le 4$$\n\n**(a)** Show that the region $R$ is bounded by the graphs of two functions, $y=f(x)$ and $y=g(x)$, where $g(x) = 4 - |x-4|$ and $f(x) = -g(x)$.\n[2]\n\n**(b)** Sketch the region $R$, clearly identifying the coordinates of its vertices. Hence, describe the geometric shape of $R$.\n[2]\n\n**(c)** A critical component is to be placed at a point $P(x,y)$ within the region $R$. The stability of the component is maximized when its squared distance from the origin, $S = x^2+y^2$, is greatest. By considering the geometric nature of $R$, determine the coordinates of the optimal placement point $P$.\n[3]\n\n**(d)** A new specification requires the operational envelope to be generalized to $|x-a| + |y| \\le k$, where $a$ and $k$ are positive real constants with $a>k$. Justify why the point that maximizes $S = x^2+y^2$ in this generalized region is always $(a+k, 0)$.\n[2]",
+    "solution": "**(a)**\nThe inequality is $|x-4| + |y| \\le 4$.\nRearranging for $|y|$ gives $|y| \\le 4 - |x-4|$.\nThis compound inequality is equivalent to $-(4 - |x-4|) \\le y \\le 4 - |x-4|$.\n**M1**\nThis is of the form $f(x) \\le y \\le g(x)$, where $g(x) = 4 - |x-4|$ and $f(x) = -(4 - |x-4|) = |x-4| - 4$. Since $f(x)=-g(x)$, the statement is shown.\n**A1**\n\n**[2 marks]**\n\n---\n\n**(b)**\nTo find the vertices, we can test the extreme points of the inequality $|x-4|+|y| \\le 4$.\nThe vertices occur when the equality holds.\nIf $y=0$, then $|x-4|=4$, so $x-4=4$ or $x-4=-4$. This gives $x=8$ and $x=0$. Vertices are $(8,0)$ and $(0,0)$.\nIf $x-4=0$ (i.e., $x=4$), then $|y|=4$, so $y=4$ or $y=-4$. Vertices are $(4,4)$ and $(4,-4)$.\n\nThe sketch should show a quadrilateral with these vertices:\n**(A1)** for a correct sketch with vertices labelled or clearly implied.\n*(Sketch should be a square rotated by 45 degrees, centered at (4,0))*\n\nThe vertices are $(0,0)$, $(4,4)$, $(8,0)$, and $(4,-4)$.\nThe shape is a square (sides have length $\\sqrt{(4-0)^2 + (4-0)^2} = \\sqrt{32}$, and diagonals are perpendicular).\n**(A1)** for all four correct vertices and identifying the shape as a square.\n\n**[2 marks]**\n\n---\n\n**(c)**\nThe quantity to maximize is $S = x^2+y^2$, which is the squared distance from the origin.\nFor a convex polygonal region like this square, the maximum value of a function like $S$ must occur at one of its vertices.\n**R1**\n\nWe test the value of $S$ at each vertex found in part (b):\nAt $(0,0)$: $S = 0^2+0^2 = 0$.\nAt $(4,4)$: $S = 4^2+4^2 = 32$.\nAt $(8,0)$: $S = 8^2+0^2 = 64$.\nAt $(4,-4)$: $S = 4^2+(-4)^2 = 32$.\n**M1**\n\nThe maximum value of $S$ is 64, which occurs at the point $P(8,0)$.\n**A1**\n\n**[3 marks]**\n\n---\n\n**(d)**\nThe generalized region is $|x-a| + |y| \\le k$.\nThe vertices of this region are found by setting one term to zero:\nIf $y=0$, $|x-a|=k \\implies x = a \\pm k$. Vertices: $(a+k, 0)$ and $(a-k, 0)$.\nIf $x=a$, $|y|=k \\implies y = \\pm k$. Vertices: $(a, k)$ and $(a, -k)$.\n**M1**\n\nWe compare the squared distances ($S=x^2+y^2$) of these vertices from the origin:\n$S_1 = (a+k)^2 + 0^2 = a^2+2ak+k^2$\n$S_2 = (a-k)^2 + 0^2 = a^2-2ak+k^2$\n$S_3 = a^2 + k^2$\n$S_4 = a^2 + (-k)^2 = a^2 + k^2$\n\nSince $a>0$ and $k>0$, the term $2ak$ is positive.\nBy comparing the expressions, $(a^2+2ak+k^2)$ is clearly the largest value.\nTherefore, the point $(a+k, 0)$ always maximizes the squared distance from the origin.\n**R1**\n\n**[2 marks]**",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_GRAPH_SKETCH",
-    "archetype": "find/solve",
-    "difficulty": 8,
+    "skill": "FUNC_TRANSFORM",
+    "secondary_skills": [
+      "FUNC_MODULUS",
+      "FUNC_GRAPH_SKETCH"
+    ],
+    "archetype": "spatial_coordinate_bridge",
+    "mechanisms": [
+      "cross_topic_synthesis",
+      "hidden_structure",
+      "hence_chains"
+    ],
+    "command_terms": [
+      "show that",
+      "sketch",
+      "describe",
+      "determine",
+      "justify"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
     "source": "STEP_2_2021",
     "paper_type": "Paper 1"
   },
