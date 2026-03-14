@@ -682,13 +682,25 @@
   },
   {
     "id": "aa2ebd799f085e2251756c365570820d",
-    "question": "The function g is defined by g: [1, infinity[ -> [0, infinity[, where g(x) = F(x).\nShow that g has an inverse and find this inverse.",
-    "solution": "",
-    "marks": 10,
+    "question": "Context: A search and rescue drone operates in a designated area. The boundaries of its safe operational zone are defined relative to a powerful transmission tower located at the origin.\n\n(a) A simplified model for a signal boundary is given by the inequality $|x| + |y| \\le k$, for $k>0$. Describe the geometric shape and key features of the region defined by this inequality.\n[2]\n\n(b) The drone's actual safe operational zone, $S$, is the set of points $(x,y)$ where its signal is strong enough but not saturated, defined by the inequality $2 \\le |x| + |y| \\le 4$. Determine the exact area of the region $S$.\n[3]\n\n(c) A stationary emergency beacon is activated at the point $B(2, -3)$. For safety, the drone must remain outside a circular exclusion zone of radius $\\sqrt{2}$ units centered at $B$. A proposed direct flight path is a straight line from point $P_1(-3, 1)$ to point $P_2(1, -3)$.\n\nJustify, with mathematical reasoning, why this entire flight path is not permissible.\n[4]",
+    "solution": "(a)\nThe region is a square. (A1)\nIt is centered at the origin with vertices at $(k, 0), (-k, 0), (0, k), (0, -k)$. (Alternatively, stating it is rotated by 45° is acceptable). (A1)\n[2 marks]\n\n(b)\nThe region $S$ is the area between two concentric, rotated squares.\nThe area is the area of the larger square minus the area of the smaller square. (M1)\nArea of large square (for $k=4$): The side length is $\\sqrt{4^2+4^2}=4\\sqrt{2}$, so area is $(4\\sqrt{2})^2=32$.\nOR, using the formula $2k^2$, Area = $2(4^2) = 32$. (A1)\nArea of small square (for $k=2$): Area = $2(2^2) = 8$.\nArea of $S = 32 - 8 = 24$ square units. (A1)\n[3 marks]\n\n(c)\nFirst, determine the equation of the flight path (the line passing through $P_1$ and $P_2$).\nGradient $m = \\frac{-3-1}{1-(-3)} = \\frac{-4}{4}=-1$. (M1)\nEquation: $y - 1 = -1(x - (-3)) \\Rightarrow y = -x - 2$, which can be written as $x+y+2=0$.\n\nNext, calculate the minimum distance from the beacon's center $B(2, -3)$ to the line $x+y+2=0$.\nUsing the distance formula $d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2+B^2}}$:\n$d = \\frac{|1(2) + 1(-3) + 2|}{\\sqrt{1^2+1^2}}$ (M1)\n$d = \\frac{|2 - 3 + 2|}{\\sqrt{2}} = \\frac{1}{\\sqrt{2}}$ (A1)\n\nFinally, compare this distance to the radius of the exclusion zone, $r=\\sqrt{2}$.\nSince $d = \\frac{1}{\\sqrt{2}} < \\sqrt{2}$, the flight path intersects the circular exclusion zone. (R1)\nTherefore, the flight path is not permissible.\n\n*(Note: A complete justification requires the calculation and the final comparison. A student does not need to verify that the path lies within S, as providing one valid reason for the path being impermissible is sufficient.)*\n[4 marks]",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_INVERSE",
-    "archetype": "prove",
-    "difficulty": 8,
+    "skill": "FUNC_MODULUS",
+    "secondary_skills": [],
+    "archetype": "spatial_coordinate_bridge",
+    "mechanisms": [
+      "cross_topic_synthesis",
+      "proof_unfamiliar_context",
+      "constraint_reasoning"
+    ],
+    "command_terms": [
+      "describe",
+      "determine",
+      "justify"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
     "source": "2007_Nov_Math_HL_P3",
     "paper_type": "Paper 3"
   },
