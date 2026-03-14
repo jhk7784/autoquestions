@@ -20,3 +20,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-14T14:46:31Z	0.741376	0.746487	+0.005111	keep	mutate [32] skill:FUNC_DOMAIN→FUNC_INVERSE; arch:find/solve→representation_bridge; style:None→modelling; mechs:[cross_topic_synthesis,hidden_structure,multi_representation]
 2026-03-14T15:04:07Z	0.746487	0.745909	-0.000578	discard	mutate [40] skill:FUNC_INVERSE→FUNC_QUADRATIC; arch:prove→constraint_optimization_chain; style:None→applied_real_world; mechs:[constraint_reasoning,cross_topic_synthesis,proof_unfamiliar_context]
 2026-03-14T15:39:58Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
+2026-03-14T15:58:05Z	0.746487	0.744393	-0.002094	discard	mutate [40] skill:FUNC_INVERSE→FUNC_LOG; arch:prove→proof_by_contradiction_via_construction; style:None→applied_real_world; mechs:[proof_unfamiliar_context,constraint_reasoning]
