@@ -6,3 +6,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-14T07:07:17Z	0.685739	0.691435	+0.005696	keep	mutate [9] FUNC_POLYNOMIAL→FUNC_SUM_PRODUCT_ROOTS, prove→show that
 2026-03-14T07:09:17Z	0.286348	0.410208	+0.123860	keep	mutate [6] skill:FUNC_GRAPH_SKETCH→FUNC_LOG; arch:prove→reverse_engineering; style:None→pure_abstract; mechs:[cross_topic_synthesis,hidden_structure,hence_chains]
 2026-03-14T07:56:28Z	0.410208	0.504243	+0.094035	keep	mutate [34] skill:FUNC_DOMAIN→FUNC_QUADRATIC; arch:prove→constraint_optimization_chain; style:None→modelling; mechs:[constraint_reasoning,proof_unfamiliar_context]
+2026-03-14T08:33:25Z	0.504243	0.560757	+0.056514	keep	mutate [8] skill:FUNC_GRAPH_SKETCH→FUNC_COMPOSITE; arch:prove→generalization_from_special_case; style:None→applied_real_world; mechs:[cross_topic_synthesis,hidden_structure]

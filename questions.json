@@ -111,14 +111,28 @@
   },
   {
     "id": "db55282ef13a8f8a",
-    "question": "In this question, $\\mathrm{f}(x)$ is a quartic polynomial where the coefficient of $x^{4}$ is equal to 1 , and which has four real roots, $0, a, b$ and $c$, where $0<a<b<c$.\n$\\mathrm{F}(x)$ is defined by $\\mathrm{F}(x)=\\int_{0}^{x} \\mathrm{f}(t) \\mathrm{d} t$.\nThe area enclosed by the curve $y=\\mathrm{f}(x)$ and the $x$-axis between 0 and $a$ is equal to that between $b$ and $c$, and half that between $a$ and $b$.\n(i) Sketch the curve $y=\\mathrm{F}(x)$, showing the $x$ co-ordinates of its turning points.\nExplain why $\\mathrm{F}(x)$ must have the form $\\mathrm{F}(x)=\\frac{1}{5} x^{2}(x-c)^{2}(x-h)$, where $0<h<c$.\nFind, in factorised form, an expression for $\\mathrm{F}(x)+\\mathrm{F}(c-x)$ in terms of $c, h$ and $x$.\n(ii) If $0 \\leqslant x \\leqslant c$, explain why $\\mathrm{F}(b)+\\mathrm{F}(x) \\geqslant 0$ and why $\\mathrm{F}(b)+\\mathrm{F}(x)>0$ if $x \\neq a$.\nHence show that $c-b=a$ or $c>2 h$.\nBy considering also $\\mathrm{F}(a)+\\mathrm{F}(x)$, show that $c=a+b$ and that $c=2 h$.\n(iii) Find an expression for $\\mathrm{f}(x)$ in terms of $c$ and $x$ only.\nShow that the points of inflection on $y=\\mathrm{f}(x)$ lie on the $x$-axis.\n©UCLES 2020\n7",
-    "solution": "",
-    "marks": 20,
+    "question": "A simplified model for a multi-layered data encryption process uses a transformation function, $E$, which is applied repeatedly. For a given positive encryption key, $k$, the function is defined as:\n$$E(x) = \\ln(k + e^x), \\quad x \\in \\mathbb{R}, k \\in \\mathbb{R}^+$$\nLet $E^n(x)$ denote the function obtained by composing $E$ with itself $n$ times, i.e., $E^n(x) = \\underbrace{(E \\circ E \\circ \\dots \\circ E)}_{n \\text{ times}}(x).\n\n(a) Determine a simplified expression for $E^2(x)$.\n[2]\n\n(b) Based on your result in part (a), suggest an expression for $E^n(x)$ in terms of $n, k,$ and $x$.\n[2]\n\n(c) Prove your suggested expression from part (b) is valid for all $n \\in \\mathbb{Z}^+$ using the principle of mathematical induction.\n[5]",
+    "solution": "(a) Determine a simplified expression for $E^2(x)$.\n\n*   **Solution:**\n    $E^2(x) = E(E(x)) = \\ln(k + e^{E(x)})$\n    (M1)\n    $= \\ln(k + e^{\\ln(k + e^x)})$\n    $= \\ln(k + (k + e^x))$\n    $= \\ln(2k + e^x)$\n    (A1)\n\n*   **Mark Scheme:**\n    **(M1)** for correctly setting up the composition $E(E(x))$.\n    **(A1)** for the correct simplified expression.\n    **[2 marks]**\n\n(b) Based on your result in part (a), suggest an expression for $E^n(x)$ in terms of $n, k,$ and $x$.\n\n*   **Solution:**\n    From part (a), $E^1(x) = \\ln(k + e^x)$ and $E^2(x) = \\ln(2k + e^x)$.\n    The coefficient of $k$ appears to be equal to $n$.\n    Therefore, the suggested expression is $E^n(x) = \\ln(nk + e^x)$.\n    (A2)\n\n*   **Mark Scheme:**\n    **(A2)** for the correct expression $E^n(x) = \\ln(nk + e^x)$.\n    *(Award (A1) for a partially correct expression, e.g., $\\ln(k^n + e^x)$ or $nk + e^x$)*.\n    **[2 marks]**\n\n(c) Prove your suggested expression from part (b) is valid for all $n \\in \\mathbb{Z}^+$ using the principle of mathematical induction.\n\n*   **Solution:**\n    Let $P(n)$ be the proposition $E^n(x) = \\ln(nk + e^x)$.\n\n    **1. Basis Step:**\n    For $n=1$, $E^1(x) = \\ln(1 \\cdot k + e^x) = \\ln(k + e^x)$, which is the original definition of $E(x)$. So $P(1)$ is true.\n    (R1)\n\n    **2. Inductive Hypothesis:**\n    Assume $P(p)$ is true for some integer $p \\in \\mathbb{Z}^+$.\n    That is, assume $E^p(x) = \\ln(pk + e^x)$.\n    (M1)\n\n    **3. Inductive Step:**\n    We need to prove $P(p+1)$ is true, i.e., $E^{p+1}(x) = \\ln((p+1)k + e^x)$.\n    $E^{p+1}(x) = E(E^p(x))$\n    (M1)\n    $= \\ln(k + e^{E^p(x)})$\n    Substituting the inductive hypothesis:\n    $= \\ln(k + e^{\\ln(pk + e^x)})$\n    $= \\ln(k + (pk + e^x))$\n    $= \\ln((p+1)k + e^x)$\n    (A1)\n    This is the required form for $P(p+1)$.\n\n    **4. Conclusion:**\n    Since $P(1)$ is true, and $P(p) \\Rightarrow P(p+1)$, the proposition $P(n)$ is true for all $n \\in \\mathbb{Z}^+$ by the principle of mathematical induction.\n    (R1)\n\n*   **Mark Scheme:**\n    **(R1)** for checking the basis case $n=1$.\n    **(M1)** for stating the inductive hypothesis for $n=p$ (or $n=k$, etc.).\n    **(M1)** for setting up the composition for the $p+1$ case, i.e., $E^{p+1}(x) = E(E^p(x))$.\n    **(A1)** for correct substitution and algebraic simplification to reach the target expression.\n    **(R1)** for a concluding statement that the result holds by induction (must include all previous steps being awarded).\n    **[5 marks]**",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_GRAPH_SKETCH",
-    "archetype": "prove",
-    "difficulty": 8,
-    "source": "STEP_2_2020",
+    "skill": "FUNC_COMPOSITE",
+    "secondary_skills": [
+      "FUNC_LOG",
+      "FUNC_EXP"
+    ],
+    "archetype": "generalization_from_special_case",
+    "mechanisms": [
+      "cross_topic_synthesis",
+      "hidden_structure"
+    ],
+    "command_terms": [
+      "determine",
+      "find",
+      "show that"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
+    "source": "IB Revision",
     "paper_type": "Paper 1"
   },
   {
