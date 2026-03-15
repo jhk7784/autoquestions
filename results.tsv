@@ -54,3 +54,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-15T13:59:03Z	0.792098	0.790546	-0.001552	discard	mutate [37] skill:FUNC_DOMAIN→FUNC_RATIONAL; arch:prove→reverse_engineering; style:None→applied_real_world; mechs:[hidden_structure,proof_unfamiliar_context,constraint_reasoning]
 2026-03-15T14:37:14Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
 2026-03-15T15:01:15Z	0.792098	0.791931	-0.000167	discard	mutate [37] skill:FUNC_DOMAIN→FUNC_RATIONAL; arch:prove→reverse_engineering; style:None→applied_real_world; mechs:[hidden_structure,proof_unfamiliar_context,constraint_reasoning,cross_topic_synthesis]
+2026-03-15T15:39:10Z	0.792098	0.792104	+0.000006	keep	mutate [37] skill:FUNC_DOMAIN→FUNC_RATIONAL; arch:prove→proof_by_contradiction_via_construction; style:None→applied_real_world; mechs:[hidden_structure,constraint_reasoning,proof_unfamiliar_context]
