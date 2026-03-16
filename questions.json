@@ -224,13 +224,29 @@
   },
   {
     "id": "478f709efbc84664",
-    "question": "Show that, if $k$ is a root of the quartic equation\n$$x^{4}+a x^{3}+b x^{2}+a x+1=0$$\nthen $k^{-1}$ is a root.\nYou are now given that $a$ and $b$ in ( $*$ ) are both real and are such that the roots are all real.\n(i) Write down all the values of $a$ and $b$ for which ( $*$ ) has only one distinct root.\n(ii) Given that ( $*$ ) has exactly three distinct roots, show that either $b=2 a-2$ or $b=-2 a-2$.\n(iii) Solve ( $*$ ) in the case $b=2 a-2$, giving your solutions in terms of $a$.\nGiven that $a$ and $b$ are both real and that the roots of (*) are all real, find necessary and sufficient conditions, in terms of $a$ and $b$, for ( $*$ ) to have exactly three distinct real roots.\nFor $n \\geqslant 7,1!\\times 3!\\times \\cdots \\times(2 n-1)!>(4 n)!$.",
-    "solution": "",
-    "marks": 20,
+    "question": "Context: The distortion effect of a particular camera lens is modelled by the rational function $f_c(x) = \\frac{cx}{x^2+1}$, where $x \\in \\mathbb{R}$ is the coordinate of a point on an object, $f_c(x)$ is the corresponding coordinate on the image sensor, and $c>0$ is a constant representing the lens curvature.\n\n(a) For the case where $c=4$, find the coordinates of any local maximum and minimum points on the graph of $y=f_4(x)$.\n[3]\n\n(b) An alternative representation for the points on the graph of $y=f_c(x)$ uses the substitution $x=\\tan\\theta$, for $-\\frac{\\pi}{2} < \\theta < \\frac{\\pi}{2}$. Verify that this substitution transforms the function into the form $y(\\theta) = \\frac{c}{2}\\sin(2\\theta)$.\n[2]\n\n(c) A key property of this distortion model is that for any non-zero output value $y_0$ in the range of the function, there are exactly two distinct input values, $x_1$ and $x_2$, that produce this output. A designer conjectures that these two inputs are always related by the property $x_1 x_2 = 1$.\n\nDeduce, using the parametric form from part (b), the relationship between $\\theta_1$ and $\\theta_2$ that corresponds to $y(\\theta_1)=y(\\theta_2)$ for $\\theta_1 \\neq \\theta_2$. Hence, prove the designer's conjecture.\n[4]",
+    "solution": "**(a)**\nTo find the stationary points, we need to find the derivative of $f_4(x) = \\frac{4x}{x^2+1}$ and set it to zero.\nUsing the quotient rule:\n$f'_4(x) = \\frac{4(x^2+1) - 4x(2x)}{(x^2+1)^2}$\n**M1**\n$f'_4(x) = \\frac{4x^2+4 - 8x^2}{(x^2+1)^2} = \\frac{4-4x^2}{(x^2+1)^2}$\n**A1**\nSetting the derivative to zero: $4-4x^2=0 \\implies x^2=1 \\implies x = \\pm 1$.\nWhen $x=1$, $y = f_4(1) = \\frac{4(1)}{1^2+1} = 2$.\nWhen $x=-1$, $y = f_4(-1) = \\frac{4(-1)}{(-1)^2+1} = -2$.\nThe local maximum is at $(1, 2)$ and the local minimum is at $(-1, -2)$.\n**A1**\n***\n**[3 marks]**\n\n**(b)**\nSubstitute $x=\\tan\\theta$ into the expression for $f_c(x)$:\n$y = f_c(\\tan\\theta) = \\frac{c \\tan\\theta}{(\\tan\\theta)^2+1}$\n**M1**\nUsing the identity $1+\\tan^2\\theta = \\sec^2\\theta$:\n$y = \\frac{c \\tan\\theta}{\\sec^2\\theta} = c \\frac{\\sin\\theta/\\cos\\theta}{1/\\cos^2\\theta}$\n$y = c \\sin\\theta \\cos\\theta$\nUsing the double angle identity $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$:\n$y = \\frac{c}{2} (2\\sin\\theta\\cos\\theta) = \\frac{c}{2}\\sin(2\\theta)$.\n**A1**\n***\n**[2 marks]**\n\n**(c)**\nLet $x_1 = \\tan\\theta_1$ and $x_2 = \\tan\\theta_2$.\nThe condition $y(\\theta_1) = y(\\theta_2)$ becomes:\n$\\frac{c}{2}\\sin(2\\theta_1) = \\frac{c}{2}\\sin(2\\theta_2) \\implies \\sin(2\\theta_1) = \\sin(2\\theta_2)$\n**R1**\nFor a sine function, if $\\sin A = \\sin B$ and $A \\neq B$, then $A = \\pi - B + 2n\\pi$ for $n \\in \\mathbb{Z}$.\nGiven the domain $-\\frac{\\pi}{2} < \\theta < \\frac{\\pi}{2}$, we have $-\\pi < 2\\theta < \\pi$.\nThe non-trivial solution (for $\\theta_1 \\neq \\theta_2$) is $2\\theta_1 = \\pi - 2\\theta_2$.\nThis gives the relationship $2(\\theta_1 + \\theta_2) = \\pi \\implies \\theta_1 + \\theta_2 = \\frac{\\pi}{2}$.\n**M1**\nNow we relate this back to $x_1$ and $x_2$.\nFrom $\\theta_2 = \\frac{\\pi}{2} - \\theta_1$, we have:\n$x_2 = \\tan(\\theta_2) = \\tan\\left(\\frac{\\pi}{2} - \\theta_1\\right)$\n**M1**\nUsing the complementary angle identity for tangent, $\\tan\\left(\\frac{\\pi}{2} - \\alpha\\right) = \\cot\\alpha$:\n$x_2 = \\cot(\\theta_1) = \\frac{1}{\\tan(\\theta_1)}$\nSince $x_1 = \\tan(\\theta_1)$, this means $x_2 = \\frac{1}{x_1}$.\nTherefore, $x_1 x_2 = 1$. This proves the designer's conjecture.\n**A1**\n***\n**[4 marks]**",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_SUM_PRODUCT_ROOTS",
-    "archetype": "find/solve",
-    "difficulty": 8,
+    "skill": "FUNC_RATIONAL",
+    "secondary_skills": [
+      "FUNC_GRAPH_SKETCH"
+    ],
+    "archetype": "representation_bridge",
+    "mechanisms": [
+      "multi_representation",
+      "hidden_structure",
+      "cross_topic_synthesis"
+    ],
+    "command_terms": [
+      "find",
+      "verify",
+      "deduce",
+      "hence",
+      "prove"
+    ],
+    "style": "modelling",
+    "difficulty": 7,
     "source": "STEP_2_2018",
     "paper_type": "Paper 1"
   },
