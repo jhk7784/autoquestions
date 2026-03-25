@@ -335,3 +335,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-03-25T15:53:11Z	0.804977	0.800670	-0.004307	discard	mutate [7] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:generalization_from_special_case→constraint_optimization_chain; style:modelling→applied_real_world; mechs:[constraint_reasoning,hence_chains]
 2026-03-25T17:01:59Z	0.804977	0.800847	-0.004130	discard	mutate [7] skill:FUNC_TRANSFORM→FUNC_RATIONAL; arch:generalization_from_special_case→constraint_optimization_chain; style:modelling→applied_real_world; mechs:[constraint_reasoning,cross_topic_synthesis]
 2026-03-25T18:05:38Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
+2026-03-25T19:11:32Z	0.804977	0.801272	-0.003705	discard	mutate [7] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:generalization_from_special_case→constraint_optimization_chain; style:modelling→applied_real_world; mechs:[cross_topic_synthesis,constraint_reasoning,hence_chains]
