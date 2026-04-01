@@ -508,3 +508,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-01T19:43:02Z	0.804977	0.801064	-0.003913	discard	mutate [7] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:generalization_from_special_case→spatial_coordinate_bridge; style:modelling→applied_real_world; mechs:[multi_representation,constraint_reasoning,cross_topic_synthesis]
 2026-04-01T20:28:47Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-04-01T21:11:29Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-04-01T22:00:16Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
