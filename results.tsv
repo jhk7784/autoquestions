@@ -511,3 +511,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-01T22:00:16Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-04-01T22:51:14Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-04-01T23:35:01Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
+2026-04-02T00:02:13Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
