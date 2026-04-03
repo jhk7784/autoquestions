@@ -715,24 +715,27 @@
   },
   {
     "id": "abd79f056dcdbf84",
-    "question": "An architect is designing a parabolic archway for the entrance to a new building. In a 2D coordinate system, where the ground is the x-axis, the archway's shape is modelled by the function\n\n$$h(x) = -a x(x-w)$$\n\nfor $0 \\le x \\le w$. Here, $h$ is the height of the arch and $x$ is the horizontal distance from the start of the arch, both in metres. The parameter $w > 0$ represents the width of the archway at its base, and $a > 0$ is a parameter that determines its steepness.\n\n**(a)** Determine the maximum height, $H$, of the archway in terms of $a$ and $w$.\n[2]\n\n**(b)** A design constraint is imposed by the total length of a decorative steel frame that outlines the archway's bounding rectangle. The perimeter of this rectangle must be exactly 20 metres.\nShow that this constraint implies a relationship between the maximum height and the width, given by $H = 10 - w$.\n[2]\n\n**(c)** It can be shown that the cross-sectional area under the arch is given by $A = \\frac{2}{3} wH$.\nUsing the constraint from part (b), determine the width, $w$, and maximum height, $H$, of the arch that will maximize the cross-sectional area. Justify that the area you found is a maximum.\n[5]",
-    "solution": "**(a)**\nThe function is a quadratic with roots at $x=0$ and $x=w$.\nThe maximum height occurs at the vertex, which is halfway between the roots, at $x = \\frac{w}{2}$. **(M1)**\nSubstituting this value into the function:\n$H = h\\left(\\frac{w}{2}\\right) = -a \\left(\\frac{w}{2}\\right) \\left(\\frac{w}{2} - w\\right) = -a \\left(\\frac{w}{2}\\right) \\left(-\\frac{w}{2}\\right)$\n$H = \\frac{aw^2}{4}$ **(A1)**\n***\n**[2 marks]**\n\n**(b)**\nThe bounding rectangle has width $w$ and height $H$.\nThe perimeter of the bounding rectangle is $P = 2(w+H)$. **(M1)**\nGiven that the perimeter is 20 metres:\n$2(w+H) = 20$\n$w+H = 10$\n$H = 10-w$ **(AG)**\n***\n**[2 marks]**\n\n**(c)**\nThe area is given by $A = \\frac{2}{3}wH$.\nSubstitute the expression for $H$ from part (b) into the area formula:\n$A(w) = \\frac{2}{3}w(10-w)$\n$A(w) = \\frac{2}{3}(10w - w^2)$ **(M1)**\n\nTo find the maximum area, we differentiate $A(w)$ with respect to $w$ and set the derivative to zero.\n$A'(w) = \\frac{2}{3}(10 - 2w)$ **(M1)**\nSetting $A'(w)=0$:\n$\\frac{2}{3}(10 - 2w) = 0 \\implies 10 - 2w = 0 \\implies w = 5$ metres. **(A1)**\n\nThe corresponding height is $H = 10-w = 10-5 = 5$ metres. **(A1)**\n\nTo justify that this is a maximum, we use the second derivative test:\n$A''(w) = \\frac{2}{3}(-2) = -\\frac{4}{3}$\nSince $A''(w) < 0$, the turning point corresponds to a local maximum. **(R1)**\n***\n**[5 marks]**",
-    "marks": 9,
+    "question": "The operational envelope of a robotic polishing tool is being reconfigured. The initial polishing region, $R_0$, is a triangle in the $xy$-plane with vertices at O(0,0), A(4,0), and B(0,2).\n\nThe reconfiguration is described by a sequence of transformations. Let a point in the plane be represented by $(x,y)$. The transformations are:\n*   A shear, $T(x,y) = (x+y, y)$\n*   A non-uniform scaling, $U_k(x,y) = (kx, y/k)$, where $k \\in \\mathbb{R}, k>0$\n*   A reflection, $S(x,y) = (x, -y)$\n\n(a) The region $R_0$ is first transformed by the shear $T$. Let the new region be $R_1 = T(R_0)$.\n(i) Find the coordinates of the vertices of $R_1$.\n(ii) Sketch the regions $R_0$ and $R_1$ on the same set of axes.\n[3]\n\n(b) A composite transformation $G_k$ is defined as $G_k = S \\circ U_k \\circ T$. Show that the area of the region $G_k(R_0)$ is equal to the area of the region $R_0$ for any value of $k>0$.\n[4]\n\n(c) For a specific task, the robot's operational envelope must be the region $R_{new} = G_k(R_0)$. It is known that one of the vertices of $R_{new}$ is at the point $(4, -1)$. Determine the value of $k$ and the coordinates of the other two vertices of $R_{new}$.\n[3]",
+    "solution": "(a) (i)\nApply the transformation $T(x,y) = (x+y, y)$ to the vertices of $R_0$.\n*   $T(O(0,0)) = (0+0, 0) = (0,0)$\n*   $T(A(4,0)) = (4+0, 0) = (4,0)$\n*   $T(B(0,2)) = (0+2, 2) = (2,2)$\n**(M1)** for attempting to apply T to at least two vertices.\nThe vertices of $R_1$ are (0,0), (4,0), and (2,2).\n**(A1)** for all three correct vertices.\n\n(a) (ii)\nSketch showing the original right-angled triangle $R_0$ and the transformed triangle $R_1$.\n$R_0$ has vertices (0,0), (4,0), (0,2).\n$R_1$ has vertices (0,0), (4,0), (2,2).\nThe sketch should show that the base OA on the x-axis is invariant, while vertex B has moved.\n**(A1)** for a sketch showing the correct shape and location of both triangles relative to each other.\n\n(b)\nFirst, find the formula for the composite transformation $G_k(x,y)$.\n$G_k(x,y) = S(U_k(T(x,y)))$\n$= S(U_k(x+y, y))$\n$= S(k(x+y), y/k)$\n$= (k(x+y), -y/k)$\n**(M1)** for correctly composing the three functions in the correct order.\n\nNext, find the vertices of the transformed region $G_k(R_0)$ by applying $G_k$ to the vertices of $R_0$.\n*   $G_k(0,0) = (0,0)$\n*   $G_k(4,0) = (k(4+0), -0/k) = (4k, 0)$\n*   $G_k(0,2) = (k(0+2), -2/k) = (2k, -2/k)$\n**(A1)** for finding the correct coordinates of the vertices of $G_k(R_0)$ in terms of $k$.\n\nCalculate the area of $R_0$.\nArea of $R_0 = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 4 \\times 2 = 4$.\n**(M1)** for calculating area of either $R_0$ or $G_k(R_0)$.\n\nCalculate the area of $G_k(R_0)$. Using the Shoelace/Determinant formula:\nArea = $\\frac{1}{2} |0(0 - (-2/k)) + 4k(-2/k - 0) + 2k(0-0)|$\nArea = $\\frac{1}{2} |0 - 8 + 0| = \\frac{1}{2} |-8| = 4$.\n\nSince the area of $G_k(R_0)$ is 4 and the area of $R_0$ is 4, the areas are equal for any $k>0$.\n**(R1)** for a complete argument with a clear conclusion.\n\n(c)\nThe vertices of $R_{new} = G_k(R_0)$ are $(0,0)$, $(4k, 0)$, and $(2k, -2/k)$.\nThe given vertex is $(4,-1)$. This cannot be the origin.\n**Case 1:** $(4k, 0) = (4, -1)$. Impossible.\n**Case 2:** $(2k, -2/k) = (4, -1)$.\n**(M1)** for setting up the correct algebraic correspondence.\nEquating the y-components:\n$-2/k = -1 \\implies k=2$.\nCheck in the x-component: $2k = 2(2) = 4$. Correct.\n**(A1)** for $k=2$.\nThe other two vertices are the origin, $(0,0)$, and $(4(2), 0) = (8, 0)$.\n**(A1)** for both other vertices correct.",
+    "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_QUADRATIC",
-    "secondary_skills": [],
-    "archetype": "constraint_optimization_chain",
+    "skill": "FUNC_TRANSFORM",
+    "secondary_skills": [
+      "FUNC_COMPOSITE"
+    ],
+    "archetype": "spatial_coordinate_bridge",
     "mechanisms": [
       "cross_topic_synthesis",
-      "constraint_reasoning",
-      "hence_chains"
+      "proof_unfamiliar_context",
+      "multi_representation"
     ],
     "command_terms": [
-      "determine",
+      "find",
+      "sketch",
       "show that",
-      "justify"
+      "determine"
     ],
-    "style": "applied_real_world",
+    "style": "modelling",
     "difficulty": 7,
     "source": "synthetic:gemini_diverse_web:FUNC_COMPOSITE",
     "paper_type": "Paper 1"
