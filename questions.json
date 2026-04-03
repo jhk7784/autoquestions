@@ -715,29 +715,30 @@
   },
   {
     "id": "abd79f056dcdbf84",
-    "question": "The operational envelope of a robotic polishing tool is being reconfigured. The initial polishing region, $R_0$, is a triangle in the $xy$-plane with vertices at O(0,0), A(4,0), and B(0,2).\n\nThe reconfiguration is described by a sequence of transformations. Let a point in the plane be represented by $(x,y)$. The transformations are:\n*   A shear, $T(x,y) = (x+y, y)$\n*   A non-uniform scaling, $U_k(x,y) = (kx, y/k)$, where $k \\in \\mathbb{R}, k>0$\n*   A reflection, $S(x,y) = (x, -y)$\n\n(a) The region $R_0$ is first transformed by the shear $T$. Let the new region be $R_1 = T(R_0)$.\n(i) Find the coordinates of the vertices of $R_1$.\n(ii) Sketch the regions $R_0$ and $R_1$ on the same set of axes.\n[3]\n\n(b) A composite transformation $G_k$ is defined as $G_k = S \\circ U_k \\circ T$. Show that the area of the region $G_k(R_0)$ is equal to the area of the region $R_0$ for any value of $k>0$.\n[4]\n\n(c) For a specific task, the robot's operational envelope must be the region $R_{new} = G_k(R_0)$. It is known that one of the vertices of $R_{new}$ is at the point $(4, -1)$. Determine the value of $k$ and the coordinates of the other two vertices of $R_{new}$.\n[3]",
-    "solution": "(a) (i)\nApply the transformation $T(x,y) = (x+y, y)$ to the vertices of $R_0$.\n*   $T(O(0,0)) = (0+0, 0) = (0,0)$\n*   $T(A(4,0)) = (4+0, 0) = (4,0)$\n*   $T(B(0,2)) = (0+2, 2) = (2,2)$\n**(M1)** for attempting to apply T to at least two vertices.\nThe vertices of $R_1$ are (0,0), (4,0), and (2,2).\n**(A1)** for all three correct vertices.\n\n(a) (ii)\nSketch showing the original right-angled triangle $R_0$ and the transformed triangle $R_1$.\n$R_0$ has vertices (0,0), (4,0), (0,2).\n$R_1$ has vertices (0,0), (4,0), (2,2).\nThe sketch should show that the base OA on the x-axis is invariant, while vertex B has moved.\n**(A1)** for a sketch showing the correct shape and location of both triangles relative to each other.\n\n(b)\nFirst, find the formula for the composite transformation $G_k(x,y)$.\n$G_k(x,y) = S(U_k(T(x,y)))$\n$= S(U_k(x+y, y))$\n$= S(k(x+y), y/k)$\n$= (k(x+y), -y/k)$\n**(M1)** for correctly composing the three functions in the correct order.\n\nNext, find the vertices of the transformed region $G_k(R_0)$ by applying $G_k$ to the vertices of $R_0$.\n*   $G_k(0,0) = (0,0)$\n*   $G_k(4,0) = (k(4+0), -0/k) = (4k, 0)$\n*   $G_k(0,2) = (k(0+2), -2/k) = (2k, -2/k)$\n**(A1)** for finding the correct coordinates of the vertices of $G_k(R_0)$ in terms of $k$.\n\nCalculate the area of $R_0$.\nArea of $R_0 = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 4 \\times 2 = 4$.\n**(M1)** for calculating area of either $R_0$ or $G_k(R_0)$.\n\nCalculate the area of $G_k(R_0)$. Using the Shoelace/Determinant formula:\nArea = $\\frac{1}{2} |0(0 - (-2/k)) + 4k(-2/k - 0) + 2k(0-0)|$\nArea = $\\frac{1}{2} |0 - 8 + 0| = \\frac{1}{2} |-8| = 4$.\n\nSince the area of $G_k(R_0)$ is 4 and the area of $R_0$ is 4, the areas are equal for any $k>0$.\n**(R1)** for a complete argument with a clear conclusion.\n\n(c)\nThe vertices of $R_{new} = G_k(R_0)$ are $(0,0)$, $(4k, 0)$, and $(2k, -2/k)$.\nThe given vertex is $(4,-1)$. This cannot be the origin.\n**Case 1:** $(4k, 0) = (4, -1)$. Impossible.\n**Case 2:** $(2k, -2/k) = (4, -1)$.\n**(M1)** for setting up the correct algebraic correspondence.\nEquating the y-components:\n$-2/k = -1 \\implies k=2$.\nCheck in the x-component: $2k = 2(2) = 4$. Correct.\n**(A1)** for $k=2$.\nThe other two vertices are the origin, $(0,0)$, and $(4(2), 0) = (8, 0)$.\n**(A1)** for both other vertices correct.",
+    "question": "**Context:** The power output, $P$, in watts, of a prototype parabolic solar collector is modelled as a function of its curvature parameter, $k > 0$. The cross-section of the collector is given by the equation $y = kx^2$. The power output is given by the function:\n$$P(k) = -1000k^2 + 1200k + 500$$\n\n**(a)** Determine the value of $k$ that results in the maximum possible power output, and state this maximum value.\n[3 marks]\n\n**(b)** The collector has a fixed aperture width of 4 metres, meaning its cross-section exists for $x \\in [-2, 2]$. For effective energy focusing, the depth of the collector, $d$, must be at least 1.5 metres.\n\nShow that this constraint implies $k \\ge 0.375$.\n[3 marks]\n\n**(c)** For manufacturing reasons, the material used for the collector has a maximum curvature tolerance, such that $k \\le 0.5$.\n\nConsidering both this constraint and the one from part (b), find the maximum achievable power output and justify the value of $k$ that produces it.\n[4 marks]",
+    "solution": "**(a)** To find the maximum, we find the vertex of the quadratic $P(k)$.\nThe value of $k$ at the vertex is given by $k = -\\frac{b}{2a}$.\n$k = -\\frac{1200}{2(-1000)}$ **(M1)**\n$k = 0.6$ **(A1)**\n\nSubstitute $k=0.6$ back into $P(k)$ to find the maximum power:\n$P(0.6) = -1000(0.6)^2 + 1200(0.6) + 500 = -360 + 720 + 500 = 860$\nThe maximum power output is 860 watts. **(A1)**\n**[3 marks]**\n\n**(b)** The depth $d$ of the collector is the value of $y$ at the edge of the aperture, where $x=2$ (or $x=-2$).\n$d = y|_{x=2} = k(2)^2 = 4k$ **(M1)**\n\nThe constraint is that the depth must be at least 1.5 metres.\n$d \\ge 1.5$\n$4k \\ge 1.5$ **(M1)**\n\n$k \\ge \\frac{1.5}{4}$\n$k \\ge 0.375$ **(A1)**\n**[3 marks]**\n\n**(c)** From part (b), we have the constraint $k \\ge 0.375$.\nThe new constraint is $k \\le 0.5$.\nCombining these gives the valid operational domain for $k$: $0.375 \\le k \\le 0.5$. **(R1)**\n\nThe vertex of the parabola $P(k)$ is at $k=0.6$, which was found in part (a).\nThis value is outside the allowed domain $[0.375, 0.5]$. **(R1)**\n\nSince $P(k)$ is a downward-opening parabola, its value is increasing for all $k < 0.6$.\nThe allowed domain $[0.375, 0.5]$ is entirely to the left of the vertex.\nTherefore, on this domain, $P(k)$ is strictly increasing.\nThe maximum value must occur at the rightmost boundary of the domain, which is $k = 0.5$. **(M1)**\n\nSubstitute $k=0.5$ into the power function:\n$P(0.5) = -1000(0.5)^2 + 1200(0.5) + 500$\n$P(0.5) = -1000(0.25) + 600 + 500 = -250 + 600 + 500 = 850$\nThe maximum achievable power is 850 watts, which occurs at $k=0.5$. **(A1)**\n**[4 marks]**",
     "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_TRANSFORM",
+    "skill": "FUNC_QUADRATIC",
     "secondary_skills": [
-      "FUNC_COMPOSITE"
+      "FUNC_DOMAIN"
     ],
-    "archetype": "spatial_coordinate_bridge",
+    "archetype": "constraint_optimization_chain",
     "mechanisms": [
-      "cross_topic_synthesis",
-      "proof_unfamiliar_context",
-      "multi_representation"
+      "constraint_reasoning",
+      "hence_chains",
+      "cross_topic_synthesis"
     ],
     "command_terms": [
-      "find",
-      "sketch",
+      "determine",
+      "state",
       "show that",
-      "determine"
+      "find",
+      "justify"
     ],
-    "style": "modelling",
+    "style": "applied_real_world",
     "difficulty": 7,
-    "source": "synthetic:gemini_diverse_web:FUNC_COMPOSITE",
+    "source": "synthetic:gemini_diverse_web:FUNC_QUADRATIC",
     "paper_type": "Paper 1"
   },
   {
