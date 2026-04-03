@@ -159,30 +159,28 @@
   },
   {
     "id": "ca67f416c807cd19",
-    "question": "**Context:** In digital signal processing, a sequence of transformations, called filters, are applied to an initial signal function to modify its properties.\n\nAn iterative filter is defined by the transformation operator $T_k$, where\n$T_k[f(t)] = f(t-1) - k$, for $k \\in \\mathbb{R}$.\n\nLet an initial signal be modelled by the function $f_0(t) = t^2$.\nThe signal is transformed repeatedly, such that $f_{n+1}(t) = T_k[f_n(t)]$ for $n \\in \\mathbb{N}$.\n\n(a) Find the function $f_2(t)$ and state the coordinates of the vertex of its graph.\n[3]\n\n(b) Let $V_n$ be the vertex of the graph of $y = f_n(t)$. Deduce an expression for the coordinates of $V_n$.\n[2]\n\nA different type of filter, designed to introduce symmetry, is defined by the operator $S_a[g(t)] = g(t-a) + g(a-t)$, where $a \\in \\mathbb{R}$.\nA function $g(t)$ is defined as being symmetric about the line $t=c$ if $g(c+x) = g(c-x)$ for all $x \\in \\mathbb{R}$.\n\n(c) An initial signal $g_0(t)$ is symmetric about the line $t=0$. Let $g_1(t) = S_a[g_0(t)]$. Prove that $g_1(t)$ is symmetric about the line $t=a$.\n[5]",
-    "solution": "**(a)**\n$f_1(t) = T_k[f_0(t)] = f_0(t-1) - k = (t-1)^2 - k$ **(M1)**\n$f_2(t) = T_k[f_1(t)] = f_1(t-1) - k = ((t-1)-1)^2 - k - k$\n$f_2(t) = (t-2)^2 - 2k$ **(A1)**\nThe vertex is at $(2, -2k)$. **(A1)**\n\n**(b)**\nThe vertex of $f_0(t)$ is $(0,0)$.\nThe vertex of $f_1(t)$ is $(1,-k)$.\nThe vertex of $f_2(t)$ is $(2,-2k)$.\nObserving the pattern, the vertex $V_n$ has coordinates $(n, -nk)$. **(M1) (A1)**\n\n**(c)**\nTo prove $g_1(t)$ is symmetric about $t=a$, we must show that $g_1(a+x) = g_1(a-x)$ for all $x \\in \\mathbb{R}$. **(M1)**\nConsider the LHS: $g_1(a+x)$.\nSubstitute $t=a+x$ into the expression for $g_1(t) = g_0(t-a) + g_0(a-t)$:\n$g_1(a+x) = g_0((a+x)-a) + g_0(a-(a+x))$\n$= g_0(x) + g_0(-x)$ **(M1)(A1)**\nConsider the RHS: $g_1(a-x)$.\nSubstitute $t=a-x$ into the expression for $g_1(t)$:\n$g_1(a-x) = g_0((a-x)-a) + g_0(a-(a-x))$\n$= g_0(-x) + g_0(x)$ **(M1)**\nThe initial signal $g_0(t)$ is symmetric about $t=0$, which means $g_0(x) = g_0(-x)$.\nSince $g_0(x) + g_0(-x) = g_0(-x) + g_0(x)$, the LHS equals the RHS.\nTherefore, $g_1(t)$ is symmetric about the line $t=a$. **(R1)(AG)**",
+    "question": "The flight path of a programmable drone is modelled by the quadratic function $f_k(x) = -\\frac{1}{k}x^2 + 4x$, where $x$ is the horizontal distance in metres from its starting point and $y=f_k(x)$ is its altitude in metres. The drone starts at $(0,0)$ and lands back on the ground at $y=0$. The parameter $k \\in \\mathbb{R}^+$ controls the shape of the flight path.\n\n(a) Determine, in terms of $k$, the drone's maximum altitude and its flight range (the horizontal distance covered before it lands). [2]\n\n(b) The drone must operate within a designated flight zone. The zone has the following constraints:\n- The flight range must not exceed 24 metres.\n- The maximum altitude must not exceed 18 metres.\nDetermine the set of possible values for $k$ that satisfy both constraints. [4]\n\n(c) A different mission requires the drone's flight path to pass through a specific checkpoint located at $(4, 8)$.\n(i) Show that this requirement is met when $k=2$. [1]\n(ii) For the flight path with $k=2$, a support cable is to be run in a straight line from the drone's starting point to the checkpoint at $(4, 8)$. An alert is triggered if the vertical separation between the drone's parabolic path and the support cable is ever greater than 3 metres. Verify, with justification, whether the alert is triggered. [3]",
+    "solution": "(a) Range: The drone lands when $f_k(x) = 0 \\implies -\\frac{1}{k}x^2 + 4x = 0 \\implies x(4 - \\frac{x}{k}) = 0$. Since $x > 0$ for the landing point, $x = 4k$. **(A1)**\nMax Altitude: The vertex occurs at $x = 2k$. $f_k(2k) = -\\frac{1}{k}(2k)^2 + 4(2k) = -4k + 8k = 4k$. **(M1)(A1)**\n[2 marks]\n\n(b) Range constraint: $4k \\le 24 \\implies k \\le 6$. **(M1)(A1)**\nAltitude constraint: $4k \\le 18 \\implies k \\le 4.5$. **(M1)(A1)**\nIntersection of $k \\le 6$ and $k \\le 4.5$ given $k > 0$ yields $0 < k \\le 4.5$. **(R1)**\n[4 marks]\n\n(c) (i) Substitute $x=4, y=8$ into $f_k(x)$: $8 = -\\frac{16}{k} + 16 \\implies -8 = -\\frac{16}{k} \\implies 8k = 16 \\implies k=2$. **(M1)(AG)**\n[1 mark]\n\n(c) (ii) Cable equation: $g(x) = \\frac{8-0}{4-0}x = 2x$. **(A1)**\nVertical separation $S(x) = f_2(x) - g(x) = -\\frac{1}{2}x^2 + 4x - 2x = -\\frac{1}{2}x^2 + 2x$. **(M1)**\nThe maximum separation occurs at the vertex of $S(x)$, which is at $x = \\frac{-2}{2(-1/2)} = 2$. **(A1)**\n$S(2) = -\\frac{1}{2}(2)^2 + 2(2) = 2$ metres.\nSince $2 \\le 3$, the alert is not triggered. **(R1)**\n[3 marks]",
     "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_TRANSFORM",
+    "skill": "FUNC_QUADRATIC",
     "secondary_skills": [
-      "FUNC_COMPOSITE",
-      "FUNC_POLYNOMIAL"
+      "FUNC_GRAPH_SKETCH"
     ],
-    "archetype": "generalization_from_special_case",
+    "archetype": "constraint_optimization_chain",
     "mechanisms": [
-      "proof_unfamiliar_context",
-      "hidden_structure",
-      "transfer_generalization"
+      "constraint_reasoning",
+      "cross_topic_synthesis",
+      "strategic_path"
     ],
     "command_terms": [
-      "find",
-      "state",
-      "deduce",
-      "prove"
+      "determine",
+      "show that",
+      "find"
     ],
-    "style": "modelling",
+    "style": "applied_real_world",
     "difficulty": 7,
-    "source": "STEP_2_2018",
+    "source": "IB Math AA HL Specimen",
     "paper_type": "Paper 1"
   },
   {
