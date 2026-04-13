@@ -159,26 +159,28 @@
   },
   {
     "id": "ca67f416c807cd19",
-    "question": "The flight path of a programmable drone is modelled by the quadratic function $f_k(x) = -\\frac{1}{k}x^2 + 4x$, where $x$ is the horizontal distance in metres from its starting point and $y=f_k(x)$ is its altitude in metres. The drone starts at $(0,0)$ and lands back on the ground at $y=0$. The parameter $k \\in \\mathbb{R}^+$ controls the shape of the flight path.\n\n(a) Determine, in terms of $k$, the drone's maximum altitude and its flight range (the horizontal distance covered before it lands). [2]\n\n(b) The drone must operate within a designated flight zone. The zone has the following constraints:\n- The flight range must not exceed 24 metres.\n- The maximum altitude must not exceed 18 metres.\nDetermine the set of possible values for $k$ that satisfy both constraints. [4]\n\n(c) A different mission requires the drone's flight path to pass through a specific checkpoint located at $(4, 8)$.\n(i) Show that this requirement is met when $k=2$. [1]\n(ii) For the flight path with $k=2$, a support cable is to be run in a straight line from the drone's starting point to the checkpoint at $(4, 8)$. An alert is triggered if the vertical separation between the drone's parabolic path and the support cable is ever greater than 3 metres. Verify, with justification, whether the alert is triggered. [3]",
-    "solution": "(a) Range: The drone lands when $f_k(x) = 0 \\implies -\\frac{1}{k}x^2 + 4x = 0 \\implies x(4 - \\frac{x}{k}) = 0$. Since $x > 0$ for the landing point, $x = 4k$. **(A1)**\nMax Altitude: The vertex occurs at $x = 2k$. $f_k(2k) = -\\frac{1}{k}(2k)^2 + 4(2k) = -4k + 8k = 4k$. **(M1)(A1)**\n[2 marks]\n\n(b) Range constraint: $4k \\le 24 \\implies k \\le 6$. **(M1)(A1)**\nAltitude constraint: $4k \\le 18 \\implies k \\le 4.5$. **(M1)(A1)**\nIntersection of $k \\le 6$ and $k \\le 4.5$ given $k > 0$ yields $0 < k \\le 4.5$. **(R1)**\n[4 marks]\n\n(c) (i) Substitute $x=4, y=8$ into $f_k(x)$: $8 = -\\frac{16}{k} + 16 \\implies -8 = -\\frac{16}{k} \\implies 8k = 16 \\implies k=2$. **(M1)(AG)**\n[1 mark]\n\n(c) (ii) Cable equation: $g(x) = \\frac{8-0}{4-0}x = 2x$. **(A1)**\nVertical separation $S(x) = f_2(x) - g(x) = -\\frac{1}{2}x^2 + 4x - 2x = -\\frac{1}{2}x^2 + 2x$. **(M1)**\nThe maximum separation occurs at the vertex of $S(x)$, which is at $x = \\frac{-2}{2(-1/2)} = 2$. **(A1)**\n$S(2) = -\\frac{1}{2}(2)^2 + 2(2) = 2$ metres.\nSince $2 \\le 3$, the alert is not triggered. **(R1)**\n[3 marks]",
-    "marks": 10,
+    "question": "Context: A landscape architect is designing a decorative patio. The design is based on the transformation of a fundamental shape, $R$, which is defined in the $xy$-plane as the finite region bounded by the parabola $y = x^2$ and the line $y=4$.\n\n(a)\n(i) Sketch the region $R$.\n(ii) Determine the exact area of the region $R$.\n[3 marks]\n\n(b) The architect applies a linear transformation $T$ to the region $R$, where $T$ maps a point $(x,y)$ to a point $(u,v)$ such that:\n$$\\begin{aligned}\nu &= x - y \\\\\nv &= x + y\n\\end{aligned}$$\nDescribe the geometric effect of the transformation $T$ as a composition of two simpler, standard transformations.\n[2 marks]\n\n(c) The boundary curve $y=x^2$ of region $R$ is transformed by $T$ into a new curve $C$. Show that the equation of the curve $C$ can be written as $u^2 + 2uv + v^2 + 2u - 2v = 0$.\n[2 marks]\n\n(d) The architect claims that the area of the transformed patio design, $R'$, is exactly double the area of the fundamental shape $R$. Justify, by considering a property of the transformation $T$, whether this claim is correct. Direct calculation of the area of $R'$ is not required.\n[2 marks]",
+    "solution": "(a)\n(i) Correct sketch showing a parabola $y=x^2$ opening upwards, symmetric about the y-axis, capped by the horizontal line $y=4$. The enclosed region $R$ should be shaded. \n**A1**\n\n(ii) The points of intersection are where $x^2 = 4 \\Rightarrow x = \\pm 2$.\nArea = $\\int_{-2}^{2} (4 - x^2) \\,dx$\n**M1**\nFor setting up the correct definite integral with correct function and limits.\n\n$= \\left[4x - \\frac{x^3}{3}\\right]_{-2}^{2}$\n$= \\left(4(2) - \\frac{2^3}{3}\\right) - \\left(4(-2) - \\frac{(-2)^3}{3}\\right)$\n$= \\left(8 - \\frac{8}{3}\\right) - \\left(-8 + \\frac{8}{3}\\right)$\n$= 16 - \\frac{16}{3} = \\frac{32}{3}$\n**A1**\n\n[3 marks]\n\n(b)\nThe transformation can be expressed in matrix form: $\\begin{pmatrix} u \\\\ v \\end{pmatrix} = \\begin{pmatrix} 1 & -1 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix}$.\nThis matrix can be decomposed: $\\begin{pmatrix} 1 & -1 \\\\ 1 & 1 \\end{pmatrix} = \\sqrt{2} \\begin{pmatrix} \\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\end{pmatrix} = \\begin{pmatrix} \\sqrt{2} & 0 \\\\ 0 & \\sqrt{2} \\end{pmatrix} \\begin{pmatrix} \\cos(\\frac{\\pi}{4}) & -\\sin(\\frac{\\pi}{4}) \\\\ \\sin(\\frac{\\pi}{4}) & \\cos(\\frac{\\pi}{4}) \\end{pmatrix}$\n**M1**\nFor correctly representing $T$ as a matrix and attempting to relate it to standard transformation matrices (rotation and/or scaling).\n\nThe transformation is a composition of:\n1. An anti-clockwise rotation about the origin by $\\frac{\\pi}{4}$ (or 45°).\n2. An enlargement from the origin with a scale factor of $\\sqrt{2}$.\n(The order can be reversed).\n**A1**\nFor a full and correct description of both transformations.\n\n[2 marks]\n\n(c)\nFrom the transformation equations, we express $x$ and $y$ in terms of $u$ and $v$.\n$u+v = 2x \\Rightarrow x = \\frac{u+v}{2}$\n$v-u = 2y \\Rightarrow y = \\frac{v-u}{2}$\n**A1**\nFor correctly inverting the transformation.\n\nSubstitute these into the equation of the parabola $y=x^2$:\n$\\frac{v-u}{2} = \\left(\\frac{u+v}{2}\\right)^2$\n**M1**\nFor correct substitution and algebraic manipulation.\n$\\frac{v-u}{2} = \\frac{u^2 + 2uv + v^2}{4}$\n$2(v-u) = u^2 + 2uv + v^2$\n$2v - 2u = u^2 + 2uv + v^2$\n$u^2 + 2uv + v^2 + 2u - 2v = 0$\n**AG**\n\n[2 marks]\n\n(d)\nThe area of the transformed region $R'$ is related to the area of $R$ by the determinant of the transformation matrix $\\mathbf{M} = \\begin{pmatrix} 1 & -1 \\\\ 1 & 1 \\end{pmatrix}$.\nArea$(R') = |\\det(\\mathbf{M})| \\times \\text{Area}(R)$.\n$\\det(\\mathbf{M}) = (1)(1) - (-1)(1) = 2$.\n**R1**\nFor stating the relationship between the area scale factor and the determinant, and calculating the determinant correctly.\n\nSince the determinant is 2, the area of $R'$ is $2 \\times \\text{Area}(R)$.\nThe architect's claim that the area is exactly double is correct.\n**A1**\nFor a clear conclusion linked to the value of the determinant.\n\n[2 marks]",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_QUADRATIC",
+    "skill": "FUNC_TRANSFORM",
     "secondary_skills": [
       "FUNC_GRAPH_SKETCH"
     ],
-    "archetype": "constraint_optimization_chain",
+    "archetype": "spatial_coordinate_bridge",
     "mechanisms": [
-      "constraint_reasoning",
       "cross_topic_synthesis",
-      "strategic_path"
+      "multi_representation",
+      "hidden_structure"
     ],
     "command_terms": [
+      "sketch",
       "determine",
+      "describe",
       "show that",
-      "find"
+      "justify"
     ],
-    "style": "applied_real_world",
+    "style": "modelling",
     "difficulty": 7,
     "source": "IB Math AA HL Specimen",
     "paper_type": "Paper 1"
