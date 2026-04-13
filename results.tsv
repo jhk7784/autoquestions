@@ -782,3 +782,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-13T08:21:12Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-04-13T10:12:32Z	0.000000	0.000000	+0.000000	crash	error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high deman
 2026-04-13T11:44:47Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
+2026-04-13T12:49:21Z	0.805718	0.802061	-0.003657	discard	mutate [7] skill:FUNC_QUADRATIC→FUNC_TRANSFORM; arch:constraint_optimization_chain→spatial_coordinate_bridge; style:applied_real_world→modelling; mechs:[cross_topic_synthesis,multi_representation,proof_unfamiliar_context]
