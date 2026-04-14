@@ -253,13 +253,30 @@
   },
   {
     "id": "e6abe11fc4268480",
-    "question": "A $2 \\times 2$ matrix $\\mathbf{M}$ is real if it can be written as $\\mathbf{M}=\\left(\\begin{array}{cc}a & b \\\\ c & d\\end{array}\\right)$, where $a, b, c$ and $d$ are real. In this case, the trace of matrix $\\mathbf{M}$ is defined to be $\\operatorname{tr}(\\mathbf{M})=a+d$ and $\\operatorname{det}(\\mathbf{M})$ is the determinant of matrix $\\mathbf{M}$. In this question, $\\mathbf{M}$ is a real $2 \\times 2$ matrix.\n(i) Prove that\n$$\\operatorname{tr}\\left(\\mathbf{M}^{2}\\right)=\\operatorname{tr}(\\mathbf{M})^{2}-2 \\operatorname{det}(\\mathbf{M})$$\n(ii) Prove that\n$$\\mathbf{M}^{2}=\\mathbf{I} \\text { but } \\mathbf{M} \\neq \\pm \\mathbf{I} \\Longleftrightarrow \\operatorname{tr}(\\mathbf{M})=0 \\text { and } \\operatorname{det}(\\mathbf{M})=-1,$$\nand that\n$$\\mathbf{M}^{2}=-\\mathbf{I} \\Longleftrightarrow \\operatorname{tr}(\\mathbf{M})=0 \\text { and } \\operatorname{det}(\\mathbf{M})=1 .$$\n(iii) Use part (ii) to prove that\n$$\\mathbf{M}^{4}=\\mathbf{I} \\Longleftrightarrow \\mathbf{M}^{2}= \\pm \\mathbf{I} .$$\nFind a necessary and sufficient condition on $\\operatorname{det}(\\mathbf{M})$ and $\\operatorname{tr}(\\mathbf{M})$ so that $\\mathbf{M}^{4}=-\\mathbf{I}$.\n(iv) Give an example of a matrix $\\mathbf{M}$ for which $\\mathbf{M}^{8}=\\mathbf{I}$, but which does not represent a rotation or reflection. [Note that the matrices $\\pm \\mathbf{I}$ are both rotations.]\n©UCLES 2020\n6\n$7 \\quad$ In this question, $w=\\frac{2}{z-2}$.\n(i) Let $z$ be the complex number $3+t \\mathrm{i}$, where $t \\in \\mathbb{R}$. Show that $|w-1|$ is independent of $t$. Hence show that, if $z$ is a complex number on the line $\\operatorname{Re}(z)=3$ in the Argand diagram, then $w$ lies on a circle in the Argand diagram with centre 1.\nLet $V$ be the line $\\operatorname{Re}(z)=p$, where $p$ is a real constant not equal to 2 . Show that, if $z$ lies on $V$, then $w$ lies on a circle whose centre and radius you should give in terms of $p$. For which $z$ on $V$ is $\\operatorname{Im}(w)>0$ ?\n(ii) Let $H$ be the line $\\operatorname{Im}(z)=q$, where $q$ is a non-zero real constant. Show that, if $z$ lies on $H$, then $w$ lies on a circle whose centre and radius you should give in terms of $q$. For which $z$ on $H$ is $\\operatorname{Re}(w)>0$ ?",
-    "solution": "",
-    "marks": 20,
+    "question": "**Context:** The design of a high-performance mechanical spring is being optimized. The potential energy, $U(x)$, stored in the spring when it is deflected by a distance $x$ from its equilibrium position is modelled by the quadratic function\n$$U(x) = (k-2)x^2 - (k+1)x + 4$$\nwhere $k \\in \\mathbb{R}$, $k \\neq 2$ is an adjustable stiffness parameter.\n\n**(a)** Find, in terms of $k$, the deflection $x$ for which the potential energy is a minimum.\n[2]\n\n**(b)** For the spring to be structurally sound, the minimum potential energy must be positive. Determine the range of values of $k$ for which this condition is met.\n[3]\n\n**(c)** For the spring to exhibit a specific resonance behaviour, the roots of the equation $U(x)=1$, let's call them $x_1$ and $x_2$, must satisfy the condition $|x_1 - x_2|^{-1} = \\frac{\\sqrt{3}}{2}$.\nShow that this condition leads to the equation $\\frac{k-2}{|k-5|} = \\frac{\\sqrt{3}}{2}$, and hence find the exact value of $k$.\n[4]\n\n**(d)** The stiffness parameter $k$ can only be manufactured to an integer value. Investigate whether it is possible to design a spring that is both structurally sound and exhibits the required resonance behaviour. Justify your conclusion.\n[1]",
+    "solution": "**(a)**\nThe function $U(x)$ is a parabola opening upwards since $k-2$ must be positive for a minimum to exist and for the minimum energy to be positive (from part b). The minimum occurs at the vertex.\nThe x-coordinate of the vertex is given by $x = -\\frac{b}{2a}$.\n$x = -\\frac{-(k+1)}{2(k-2)}$ **(M1)**\n$x = \\frac{k+1}{2(k-2)}$ **(A1)**\n**[2 marks]**\n\n**(b)**\nFor the minimum potential energy to be positive, the parabola must not intersect the x-axis, meaning the discriminant of $U(x)=0$ must be negative.\n$\\Delta = b^2 - 4ac < 0$ **(M1)**\n$(-(k+1))^2 - 4(k-2)(4) < 0$\n$(k+1)^2 - 16(k-2) < 0$\n$k^2 - 14k + 33 < 0$ **(A1)**\n$(k-3)(k-11) < 0$\nTherefore, $3 < k < 11$. **(A1)**\n**[3 marks]**\n\n**(c)**\nThe equation is $U(x)=1 \\implies (k-2)x^2 - (k+1)x + 3 = 0$.\nThe distance between the roots $|x_1 - x_2|$ is given by $\\frac{\\sqrt{\\Delta}}{|a|}$.\n$\\Delta = (-(k+1))^2 - 4(k-2)(3) = k^2 + 2k + 1 - 12k + 24 = k^2 - 10k + 25 = (k-5)^2$. **(M1)**\nSo, $|x_1 - x_2| = \\frac{\\sqrt{(k-5)^2}}{|k-2|} = \\frac{|k-5|}{|k-2|}$.\nThe condition is $|x_1 - x_2|^{-1} = \\frac{|k-2|}{|k-5|} = \\frac{\\sqrt{3}}{2}$.\nFrom part (b), $3 < k < 11$, so $k-2 > 0$, hence $|k-2| = k-2$.\nThis gives $\\frac{k-2}{|k-5|} = \\frac{\\sqrt{3}}{2}$. **(AG)**\n\nNow, we solve for $k$. We must consider two cases for $|k-5|$.\nCase 1: $k > 5$.\n$\\frac{k-2}{k-5} = \\frac{\\sqrt{3}}{2} \\implies 2(k-2) = \\sqrt{3}(k-5) \\implies 2k-4 = \\sqrt{3}k - 5\\sqrt{3}$\n$k(2-\\sqrt{3}) = 4 - 5\\sqrt{3} \\implies k = \\frac{4-5\\sqrt{3}}{2-\\sqrt{3}} = (4-5\\sqrt{3})(2+\\sqrt{3}) = -7 - 6\\sqrt{3}$.\nThis value is negative, so it is not in the range $k>5$. No solution here. **(M1)**\n\nCase 2: $k < 5$.\n$\\frac{k-2}{-(k-5)} = \\frac{\\sqrt{3}}{2} \\implies 2(k-2) = -\\sqrt{3}(k-5) \\implies 2k-4 = -\\sqrt{3}k + 5\\sqrt{3}$\n$k(2+\\sqrt{3}) = 4 + 5\\sqrt{3} \\implies k = \\frac{4+5\\sqrt{3}}{2+\\sqrt{3}} = (4+5\\sqrt{3})(2-\\sqrt{3}) = -7 + 6\\sqrt{3}$. **(A1)**\nWe check if this value is consistent with $3 < k < 5$.\n$3 < -7 + 6\\sqrt{3} < 5$.\n$10 < 6\\sqrt{3} < 12 \\implies 100 < 36 \\times 3 < 144 \\implies 100 < 108 < 144$. This is true.\nSo, the only solution is $k = -7 + 6\\sqrt{3}$. **(A1)**\n**[4 marks]**\n\n**(d)**\nFrom part (b), for the spring to be structurally sound, we require $3 < k < 11$.\nFrom part (c), for the spring to have the correct resonance, we require $k = -7 + 6\\sqrt{3}$.\n$6\\sqrt{3} = \\sqrt{108}$. Since $10 < \\sqrt{108} < 11$, we have $k = -7 + 6\\sqrt{3} \\approx -7 + 10.4 = 3.4$.\nThe value of $k$ required for resonance is not an integer.\nSince the required value for $k$ is not an integer, it is not possible to manufacture a spring that satisfies both conditions. **(R1)**\n**[1 mark]**",
+    "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_TRANSFORM",
-    "archetype": "prove",
-    "difficulty": 8,
+    "skill": "FUNC_QUADRATIC",
+    "secondary_skills": [
+      "FUNC_SUM_PRODUCT_ROOTS"
+    ],
+    "archetype": "constraint_optimization_chain",
+    "mechanisms": [
+      "constraint_reasoning",
+      "proof_unfamiliar_context",
+      "hidden_structure"
+    ],
+    "command_terms": [
+      "find",
+      "determine",
+      "show that",
+      "hence",
+      "investigate",
+      "justify"
+    ],
+    "style": "applied_real_world",
+    "difficulty": 7,
     "source": "STEP_2_2020",
     "paper_type": "Paper 1"
   },
