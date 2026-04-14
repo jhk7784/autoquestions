@@ -734,28 +734,29 @@
   },
   {
     "id": "abd79f056dcdbf84",
-    "question": "**Context:** The power output, $P$, in watts, of a prototype parabolic solar collector is modelled as a function of its curvature parameter, $k > 0$. The cross-section of the collector is given by the equation $y = kx^2$. The power output is given by the function:\n$$P(k) = -1000k^2 + 1200k + 500$$\n\n**(a)** Determine the value of $k$ that results in the maximum possible power output, and state this maximum value.\n[3 marks]\n\n**(b)** The collector has a fixed aperture width of 4 metres, meaning its cross-section exists for $x \\in [-2, 2]$. For effective energy focusing, the depth of the collector, $d$, must be at least 1.5 metres.\n\nShow that this constraint implies $k \\ge 0.375$.\n[3 marks]\n\n**(c)** For manufacturing reasons, the material used for the collector has a maximum curvature tolerance, such that $k \\le 0.5$.\n\nConsidering both this constraint and the one from part (b), find the maximum achievable power output and justify the value of $k$ that produces it.\n[4 marks]",
-    "solution": "**(a)** To find the maximum, we find the vertex of the quadratic $P(k)$.\nThe value of $k$ at the vertex is given by $k = -\\frac{b}{2a}$.\n$k = -\\frac{1200}{2(-1000)}$ **(M1)**\n$k = 0.6$ **(A1)**\n\nSubstitute $k=0.6$ back into $P(k)$ to find the maximum power:\n$P(0.6) = -1000(0.6)^2 + 1200(0.6) + 500 = -360 + 720 + 500 = 860$\nThe maximum power output is 860 watts. **(A1)**\n**[3 marks]**\n\n**(b)** The depth $d$ of the collector is the value of $y$ at the edge of the aperture, where $x=2$ (or $x=-2$).\n$d = y|_{x=2} = k(2)^2 = 4k$ **(M1)**\n\nThe constraint is that the depth must be at least 1.5 metres.\n$d \\ge 1.5$\n$4k \\ge 1.5$ **(M1)**\n\n$k \\ge \\frac{1.5}{4}$\n$k \\ge 0.375$ **(A1)**\n**[3 marks]**\n\n**(c)** From part (b), we have the constraint $k \\ge 0.375$.\nThe new constraint is $k \\le 0.5$.\nCombining these gives the valid operational domain for $k$: $0.375 \\le k \\le 0.5$. **(R1)**\n\nThe vertex of the parabola $P(k)$ is at $k=0.6$, which was found in part (a).\nThis value is outside the allowed domain $[0.375, 0.5]$. **(R1)**\n\nSince $P(k)$ is a downward-opening parabola, its value is increasing for all $k < 0.6$.\nThe allowed domain $[0.375, 0.5]$ is entirely to the left of the vertex.\nTherefore, on this domain, $P(k)$ is strictly increasing.\nThe maximum value must occur at the rightmost boundary of the domain, which is $k = 0.5$. **(M1)**\n\nSubstitute $k=0.5$ into the power function:\n$P(0.5) = -1000(0.5)^2 + 1200(0.5) + 500$\n$P(0.5) = -1000(0.25) + 600 + 500 = -250 + 600 + 500 = 850$\nThe maximum achievable power is 850 watts, which occurs at $k=0.5$. **(A1)**\n**[4 marks]**",
+    "question": "**Context:** A computer-controlled laser cutter is programmed to create a metallic component. The initial design is a square region, $S$, on a 2D plane, defined by the inequalities $|x| \\le 1$ and $|y| \\le 1$. The cutter's software then applies a linear transformation, $T$, to the region $S$ to produce the final component shape, $S'$. The transformation $T$ is defined by:\n\n$$T\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 2x - y \\\\ x + py \\end{pmatrix}$$\n\nwhere $p \\in \\mathbb{R}$ is an adjustable design parameter.\n\n(a) Sketch the region $S$, clearly indicating the coordinates of its vertices.\n[2]\n\n(b) The vertices of $S$ are transformed into the vertices of $S'$. Find the coordinates of the four vertices of $S'$, in terms of $p$.\n[2]\n\n(c) Describe the region $S'$ by finding the Cartesian equations of the four lines that form its boundary.\n[3]\n\n(d) The quality control system requires the area of the component $S'$ to be exactly 16 square units.\n(i) Given that $p > 0$, determine the value of $p$.\n(ii) For this value of $p$, verify that the point $(4, 0)$ lies on one of the boundaries of $S'$.\n[3]",
+    "solution": "**(a)**\nThe region $S$ is a square with vertices at $(1,1), (1,-1), (-1,-1), (-1,1)$.\n\n*(M1)* for drawing a square centred at the origin.\n*(A1)* for correctly labelling the coordinates of all four vertices.\n**[2 marks]**\n\n---\n\n**(b)**\nLet the vertices of $S$ be $A(1,1), B(1,-1), C(-1,-1), D(-1,1)$.\nApplying the transformation $T$:\n$A' = T\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2(1) - 1 \\\\ 1 + p(1) \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 1+p \\end{pmatrix}$\n$B' = T\\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2(1) - (-1) \\\\ 1 + p(-1) \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 1-p \\end{pmatrix}$\n$C' = T\\begin{pmatrix} -1 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2(-1) - (-1) \\\\ -1 + p(-1) \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ -1-p \\end{pmatrix}$\n$D' = T\\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2(-1) - 1 \\\\ -1 + p(1) \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ -1+p \\end{pmatrix}$\n\n*(M1)* for attempting to apply the transformation to at least two vertices.\n*(A1)* for all four correct coordinate pairs in terms of $p$.\n**[2 marks]**\n\n---\n\n**(c)**\nThe region $S'$ is a parallelogram. We find the equations of the lines passing through pairs of adjacent vertices.\nLine $A'B'$: Gradient $m = \\frac{(1-p) - (1+p)}{3-1} = \\frac{-2p}{2} = -p$.\nEquation: $y - (1+p) = -p(x-1) \\implies y = -px + 2p+1$.\n\nLine $C'D'$: Gradient $m = \\frac{(-1+p) - (-1-p)}{-3-(-1)} = \\frac{2p}{-2} = -p$.\nEquation: $y - (-1-p) = -p(x-(-1)) \\implies y = -px - 2p-1$.\n\nLine $B'C'$: Gradient $m = \\frac{(-1-p) - (1-p)}{-1-3} = \\frac{-2}{-4} = \\frac{1}{2}$.\nEquation: $y - (1-p) = \\frac{1}{2}(x-3) \\implies 2y - 2 + 2p = x-3 \\implies x - 2y = 1+2p$.\n\nLine $A'D'$: Gradient $m = \\frac{(-1+p) - (1+p)}{-3-1} = \\frac{-2}{-4} = \\frac{1}{2}$.\nEquation: $y - (1+p) = \\frac{1}{2}(x-1) \\implies 2y - 2 - 2p = x-1 \\implies x - 2y = -1-2p$.\n\n*(M1)* for attempting to find the gradient between any two transformed vertices.\n*(A1)* for finding two correct parallel line equations.\n*(A1)* for finding all four correct line equations.\n**[3 marks]**\n\n---\n\n**(d)**\n(i) Area$(S') = |2p+1| \\times 4$.\n$16 = |2p+1| \\times 4$.\n$4 = |2p+1|$.\nGiven $p>0$, $2p+1 > 1$, so we can drop the modulus sign.\n$2p+1 = 4 \\implies 2p = 3 \\implies p=1.5$.\n*(M1)* For Area$(S') = |\\det(M)| \\times \\text{Area}(S)$.\n*(A1)* For $p=1.5$.\n\n(ii) For $p=1.5$, one of the boundary lines from part (c) is $x-2y = 1+2p$.\n$x-2y = 1+2(1.5) = 1+3 = 4$.\nSubstitute the point $(4,0)$ into the equation $x-2y=4$:\nLHS = $4 - 2(0) = 4$.\nRHS = 4.\nSince LHS = RHS, the point $(4,0)$ lies on the boundary.\n*(R1)* for correctly substituting both the calculated value of $p$ and the coordinates of the point into a relevant equation from part (c) and showing equality.\n**[3 marks]**",
     "marks": 10,
     "topic": "Functions",
-    "skill": "FUNC_QUADRATIC",
+    "skill": "FUNC_TRANSFORM",
     "secondary_skills": [
-      "FUNC_DOMAIN"
+      "FUNC_MODULUS"
     ],
-    "archetype": "constraint_optimization_chain",
+    "archetype": "representation_bridge",
     "mechanisms": [
-      "constraint_reasoning",
-      "hence_chains",
-      "cross_topic_synthesis"
+      "cross_topic_synthesis",
+      "multi_representation",
+      "hidden_structure",
+      "hence_chains"
     ],
     "command_terms": [
-      "determine",
-      "state",
-      "show that",
+      "sketch",
       "find",
-      "justify"
+      "describe",
+      "determine",
+      "show that"
     ],
-    "style": "applied_real_world",
+    "style": "modelling",
     "difficulty": 7,
     "source": "synthetic:gemini_diverse_web:FUNC_QUADRATIC",
     "paper_type": "Paper 1"
