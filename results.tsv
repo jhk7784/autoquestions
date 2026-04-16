@@ -841,3 +841,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-16T20:27:31Z	0.805622	0.802796	-0.002826	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains]
 2026-04-16T21:11:37Z	0.805622	0.804279	-0.001343	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains]
 2026-04-16T22:00:15Z	0.805622	0.802716	-0.002906	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains,hidden_structure]
+2026-04-16T22:54:02Z	0.000000	0.000000	+0.000000	crash	JSON parse error: Extra data: line 28 column 1 (char 3555)
