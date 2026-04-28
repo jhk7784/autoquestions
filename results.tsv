@@ -1066,3 +1066,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-28T09:40:57Z	0.805622	0.802293	-0.003329	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_LOG; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,hence_chains,cross_topic_synthesis]
 2026-04-28T11:28:08Z	0.805622	0.802223	-0.003399	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains]
 2026-04-28T13:13:55Z	0.805622	0.803689	-0.001933	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains]
+2026-04-28T15:40:57Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
