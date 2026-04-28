@@ -1069,3 +1069,4 @@ timestamp	old_score	new_score	delta	status	description
 2026-04-28T15:40:57Z	0.000000	0.000000	+0.000000	crash	error: Missing required field: question
 2026-04-28T17:21:05Z	0.805622	0.804266	-0.001356	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; mechs:[constraint_reasoning,cross_topic_synthesis,hence_chains]
 2026-04-28T18:59:47Z	0.805622	0.803638	-0.001984	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_SUM_PRODUCT_ROOTS; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[hidden_structure,constraint_reasoning,hence_chains]
+2026-04-28T20:20:05Z	0.805622	0.803597	-0.002025	discard	mutate [26] skill:FUNC_TRANSFORM→FUNC_QUADRATIC; arch:spatial_coordinate_bridge→constraint_optimization_chain; style:applied_real_world→modelling; mechs:[constraint_reasoning,cross_topic_synthesis]
