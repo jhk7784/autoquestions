@@ -596,29 +596,27 @@
   },
   {
     "id": "41fcfa76d4a5f371",
-    "question": "**Context:** In a video game, a character's 'force field' is modelled as a two-dimensional region in the Cartesian plane. The initial shape of the force field, a region $S$, is defined by the inequality $|x| + |y| \\le 4$.\n\n**(a)**\n(i) Sketch the region $S$.\n(ii) State the coordinates of the vertices of $S$ and describe its geometric shape.\n[3 marks]\n\n**(b)**\nTo create a dynamic visual effect, the region $S$ is transformed by a horizontal shear, $T$. The transformation $T$ maps a point $(x, y)$ to a new point $(x', y')$, where $x' = x+ky$ and $y'=y$, for some constant $k>0$.\n\nThe transformed region is denoted by $S'$. After the transformation, the vertex of $S$ that lies on the positive y-axis is mapped to the point $(5, 4)$.\n\nDetermine the value of $k$.\n[2 marks]\n\n**(c)**\nHence, determine the four linear inequalities that define the boundary of the transformed region $S'$.\n[3 marks]\n\n**(d)**\nA projectile travels in a straight line path along the line with equation $x=3$. Find the exact length of the path segment that lies inside the region $S'$. Justify your answer.\n[2 marks]",
-    "solution": "**(a)**\n(i) Sketch of the region $S$:\nA square rotated by 45 degrees (a diamond shape), centred at the origin. The intercepts should be at $(\\pm 4, 0)$ and $(0, \\pm 4)$.\n\n*(A1)* for correct diamond shape centred at origin.\n*(A1)* for correctly labelling the four axial intercepts.\n\n(ii) The vertices are $(4, 0), (0, 4), (-4, 0), (0, -4)$.\nThe shape is a square.\n\n*(A1)* for all four vertices and identifying the shape as a square.\n\n**Total for (a): [3 marks]**\n\n---\n\n**(b)**\nThe vertex on the positive y-axis is $(0, 4)$.\nThe transformation is $T(x,y) = (x+ky, y)$.\nApplying the transformation to the vertex $(0, 4)$:\n$T(0,4) = (0 + k(4), 4) = (4k, 4)$.\n*(M1)* for substituting the correct vertex into the transformation equations.\n\nWe are given that the transformed point is $(5, 4)$.\nSo, $4k=5$.\n$k = \\frac{5}{4}$.\n*(A1)* for the correct value of $k$.\n\n**Total for (b): [2 marks]**\n\n---\n\n**(c)**\nThe vertices of $S$ are $A(4,0), B(0,4), C(-4,0), D(0,-4)$.\nUsing $k=\\frac{5}{4}$, we transform each vertex:\n$A' = T(4,0) = (4 + \\frac{5}{4}(0), 0) = (4,0)$\n$B' = T(0,4) = (5,4)$ (from part b)\n$C' = T(-4,0) = (-4 + \\frac{5}{4}(0), 0) = (-4,0)$\n$D' = T(0,-4) = (0 + \\frac{5}{4}(-4), -4) = (-5,-4)$\n*(M1)* for attempting to transform at least two other vertices with their value of $k$.\n\nNow we find the equations of the lines between the transformed vertices $A'B'C'D'$. The region $S'$ is a parallelogram.\nLine $A'B'$ passes through $(4,0)$ and $(5,4)$. Gradient $m = \\frac{4-0}{5-4} = 4$.\nEquation: $y - 0 = 4(x - 4) \\implies y = 4x - 16 \\implies 4x-y \\ge 16$.\nLine $B'C'$ passes through $(5,4)$ and $(-4,0)$. Gradient $m = \\frac{4-0}{5-(-4)} = \\frac{4}{9}$.\nEquation: $y - 0 = \\frac{4}{9}(x+4) \\implies 9y = 4x + 16 \\implies 4x-9y \\le -16$.\nLine $C'D'$ passes through $(-4,0)$ and $(-5,-4)$. Gradient $m = \\frac{-4-0}{-5-(-4)} = 4$.\nEquation: $y - 0 = 4(x+4) \\implies y = 4x + 16 \\implies 4x-y \\le -16$.\nLine $D'A'$ passes through $(-5,-4)$ and $(4,0)$. Gradient $m = \\frac{0-(-4)}{4-(-5)} = \\frac{4}{9}$.\nEquation: $y - 0 = \\frac{4}{9}(x - 4) \\implies 9y = 4x - 16 \\implies 4x-9y \\ge 16$.\n*(M1)* for a correct method to find the equation of at least one boundary line.\nThe inequalities defining the region are:\n$y \\le 4x+16$\n$y \\ge 4x-16$\n$y \\le \\frac{4}{9}x+\\frac{16}{9}$\n$y \\ge \\frac{4}{9}x-\\frac{16}{9}$\n*(A1)* for all four correct inequalities (or equations). Allow strict or non-strict inequalities.\n\n**Total for (c): [3 marks]**\n\n---\n\n**(d)**\nThe projectile travels along the line $x=3$. To find the segment inside $S'$, we find the intersection points of $x=3$ with the boundaries of $S'$.\nThe vertical line $x=3$ will intersect the upper and lower boundaries of the parallelogram.\nThe upper boundary is the line segment $B'C'$, with equation $y = \\frac{4}{9}x+\\frac{16}{9}$.\nThe lower boundary is the line segment $D'A'$, with equation $y = \\frac{4}{9}x-\\frac{16}{9}$.\n\nSubstitute $x=3$ into the upper boundary equation:\n$y_{upper} = \\frac{4}{9}(3)+\\frac{16}{9} = \\frac{12+16}{9} = \\frac{28}{9}$.\nSubstitute $x=3$ into the lower boundary equation:\n$y_{lower} = \\frac{4}{9}(3)-\\frac{16}{9} = \\frac{12-16}{9} = -\\frac{4}{9}$.\n*(M1)* for substituting $x=3$ into the correct pair of boundary equations from part (c).\n\nThe path segment lies between the points $(3, -4/9)$ and $(3, 28/9)$.\nThe length of this vertical segment is the difference in the y-coordinates.\nLength = $y_{upper} - y_{lower} = \\frac{28}{9} - (-\\frac{4}{9}) = \\frac{32}{9}$.\n*(A1)* for the correct exact length.\nThe justification is implicit in the correct method, showing that these are the entry and exit points of the beam through the bounded region.\n\n**Total for (d): [2 marks]**",
-    "marks": 10,
+    "question": "The design of a parabolic satellite dish is subject to several engineering constraints. The cross-section of the dish is modelled by the function $f(x) = ax^2$ for $x \\in [-R, R]$, where $R$ is the radius of the dish from the central axis and $a$ is a positive constant that determines the dish's curvature. The vertex of the parabola is at the origin. The radius of the dish is fixed at $R=2.5$ meters.\n\n**(a)** A preliminary design requires the dish to have a depth of $1$ meter (i.e., $f(2.5)=1$). Show that this design corresponds to a value of $a=0.16$. [2 marks]\n\n**(b)** The receiver for the dish must be placed at the focus of the parabola, which occurs at the point $(0, \\frac{1}{4a})$. For optimal signal reception, the receiver must be located at a distance between $1.25$ m and $1.75$ m from the vertex. Determine the interval of possible values for the parameter $a$ that satisfies this reception constraint. [3 marks]\n\n**(c)** For structural integrity, the magnitude of the slope of the dish at its outer edge must not exceed $1$. The team wants to maximize the focal length of the dish, subject to **both** the reception constraint from part (b) and this new structural constraint. Deduce the optimal value of $a$, justifying your reasoning. [4 marks]",
+    "solution": "**(a)** The dish has radius $R=2.5$ and depth $1$, so the point $(2.5, 1)$ is on the curve. Substitute $x=2.5$ and $f(x)=1$ into the model $f(x)=ax^2$:\n$1 = a(2.5)^2$ **M1**\n$1 = 6.25a \\implies a = \\frac{1}{6.25} = 0.16$ **A1 AG**\n\n**(b)** The distance of the focus from the vertex is $d = \\frac{1}{4a}$. The constraint is $1.25 \\le \\frac{1}{4a} \\le 1.75$ **M1**.\nSolving the left side: $1.25 \\le \\frac{1}{4a} \\implies 5a \\le 1 \\implies a \\le 0.2$.\nSolving the right side: $\\frac{1}{4a} \\le 1.75 \\implies 1 \\le 7a \\implies a \\ge \\frac{1}{7} \\approx 0.143$.\nThus, the interval for $a$ is $[\\frac{1}{7}, \\frac{1}{5}]$ (or $[0.143, 0.2]$) **A1 A1**.\n\n**(c)** The slope is $f'(x) = 2ax$. At the edge $x=2.5$, the slope magnitude is $|2a(2.5)| = 5a$. \nThe structural constraint is $5a \\le 1 \\implies a \\le 0.2$ (or $a \\le \\frac{1}{5}$) **M1**.\nThe goal is to maximize focal length $d = \\frac{1}{4a}$. To maximize $d$, $a$ must be minimized **R1**.\nCombining constraints: From (b), $a \\in [\\frac{1}{7}, \\frac{1}{5}]$; from structural integrity, $a \\le \\frac{1}{5}$.\nThe feasible set for $a$ is $[\\frac{1}{7}, \\frac{1}{5}]$ **M1**.\nThe minimum value in this set is $a = \\frac{1}{7}$ **A1**.",
+    "marks": 9,
     "topic": "Functions",
-    "skill": "FUNC_TRANSFORM",
+    "skill": "FUNC_QUADRATIC",
     "secondary_skills": [
-      "FUNC_MODULUS"
+      "FUNC_RATIONAL"
     ],
-    "archetype": "spatial_coordinate_bridge",
+    "archetype": "constraint_optimization_chain",
     "mechanisms": [
-      "multi_representation",
-      "hidden_structure",
-      "hence_chains",
-      "cross_topic_synthesis"
+      "constraint_reasoning",
+      "cross_topic_synthesis",
+      "strategic_path"
     ],
     "command_terms": [
-      "sketch",
-      "state",
-      "describe",
+      "show that",
       "determine",
-      "find"
+      "deduce",
+      "justify"
     ],
-    "style": "applied_real_world",
+    "style": "modelling",
     "difficulty": 7,
     "source": "synthetic:d7_enrichment:FUNC_RATIONAL",
     "paper_type": "Paper 1"
